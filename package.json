@@ -1,0 +1,24 @@
+{
+	"name": "wporg-parent-2021-project",
+	"version": "1.0.0",
+	"description": "The codebase and development environment for the WordPress.org parent theme.",
+	"author": "WordPress.org",
+	"license": "GPL-2.0-or-later",
+	"private": true,
+	"dependencies": {},
+	"devDependencies": {
+		"@wordpress/env": "9.4.0"
+	},
+	"scripts": {
+		"build:theme": "yarn workspace wporg-parent-2021 build",
+		"start:theme": "yarn workspace wporg-parent-2021 start",
+		"setup:tools": "yarn && composer install && TEXTDOMAIN=wporg composer exec update-configs",
+		"setup:wp": "wp-env run cli bash env/setup.sh",
+		"update:tools": "composer update && TEXTDOMAIN=wporg composer exec update-configs",
+		"wp-env": "wp-env",
+		"lint:php": "echo \"No PHP lint.\""
+	},
+	"workspaces": [
+		"source/wp-content/themes/wporg-parent-2021"
+	]
+}

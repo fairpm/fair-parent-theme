@@ -1,0 +1,11 @@
+body.single,
+body.page {
+	.entry-meta {
+		font-size: var(--wp--preset--font-size--small);
+		margin: calc(var(--wp--custom--margin--vertical) / 2) 0 var(--wp--custom--margin--vertical);
+
+		@include break-wide() {
+			margin-bottom: 0;
+		}
+	}
+}

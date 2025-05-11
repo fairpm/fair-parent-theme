@@ -1,0 +1,23 @@
+<!-- wp:template-part {"slug":"header"} /-->
+
+<!-- wp:columns {"align":"full","className":"is-style-two-column-display","style":{"spacing":{"margin":{"top":"var:preset|spacing|60"}}}} -->
+<div class="wp-block-columns alignfull is-style-two-column-display" style="margin-top:var(--wp--preset--spacing--60)">
+	<!-- wp:column {"style":{"spacing":{"blockGap":"16px"}},"className":"is-left-column"} -->
+	<div class="wp-block-column is-left-column">
+		<!-- wp:query-title {"type":"index","level":1,"fontSize":"heading-2"} /-->
+	</div>
+	<!-- /wp:column -->
+
+	<!-- wp:column -->
+	<div class="wp-block-column">
+		<!-- wp:template-part {"slug":"post-list"} /-->
+	</div>
+	<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:spacer -->
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:template-part {"slug":"footer"} /-->

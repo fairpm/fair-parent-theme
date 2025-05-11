@@ -1,0 +1,102 @@
+// Setup the main container to use a flex box-model allowing us to simplify the layout and "sticky" bar.
+.wp-site-blocks {
+	display: flex;
+	flex-direction: column;
+	min-height: calc(100vh - var(--wp-admin--admin-bar--height, 0px));
+	overflow-wrap: break-word;
+
+	> main,
+	> article {
+		// Make the content area grow to fill any remaining space on the screen,
+		// so that the footer is pushed to the bottom.
+		margin-bottom: auto;
+	}
+
+	> * + * {
+		margin-block-start: 0;
+	}
+}
+
+// Configures a 3 column layout where `wporg/sidebar-container` blocks sit either side of the main content.
+// Examples: Developer Resources, Documentation.
+.has-three-columns {
+	--local--sidebar--width: 248px;
+	--local--column-gap: 40px;
+	position: relative;
+	justify-content: flex-end;
+	max-width: 100%;
+
+	&.alignleft {
+		float: unset;
+		margin-inline-end: 0 !important;
+	}
+
+	> * {
+		width: 100%;
+	}
+
+	main {
+		order: 1;
+		padding-top: var(--wp--preset--spacing--20);
+	}
+
+	article {
+		max-width: var(--wp--style--global--content-size);
+	}
+
+	// Left sidebar: Typically Chapter List
+	> .wp-block-wporg-sidebar-container {
+		padding-top: var(--wp--preset--spacing--20);
+	}
+
+	// Right sidebar: Typically Table of Contents
+	article .wp-block-wporg-sidebar-container {
+		margin-block-start: 0;
+		margin-bottom: var(--wp--preset--spacing--50);
+	}
+
+	@media (min-width: 768px) {
+		flex-direction: row !important;
+		column-gap: var(--local--column-gap);
+
+		> .wp-block-wporg-sidebar-container {
+			width: var(--local--sidebar--width);
+			inset-inline-start: var(--wp--preset--spacing--edge-space);
+		}
+
+		// Allow room for the left column.
+		// Only necessary at this width if the left sidebar is present.
+		&:has(> .wp-block-wporg-sidebar-container) main {
+			width: calc(100% - var(--local--sidebar--width) - var(--local--column-gap));
+		}
+
+		.wp-block-wporg-sidebar-container {
+			--local--block-end-sidebar--width: var(--local--sidebar--width);
+		}
+	}
+
+	@media (min-width: 1300px) {
+		// Allow room for the right column.
+		width: calc(100% - var(--local--sidebar--width) - var(--local--column-gap));
+
+		article {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+
+			.wp-block-wporg-sidebar-container {
+				padding-top: var(--wp--preset--spacing--20);
+				inset-inline-end: calc((var(--local--block-end-sidebar--width) * -1) - var(--local--column-gap));
+				inset-block: 0;
+			}
+		}
+	}
+
+	@media (min-width: 1400px) {
+		// Create an empty left column.
+		// If a left sidebar is present, space would have already been created on screens >= 768px.
+		main {
+			width: calc(100% - var(--local--sidebar--width) - var(--local--column-gap));
+		}
+	}
+}
