@@ -2,10 +2,10 @@
 /**
  * The post type class.
  *
- * @package air-light
+ * @package fair-parent
  **/
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 /**
  * Registers the Your Post Type post type.

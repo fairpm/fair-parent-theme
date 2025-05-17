@@ -2,10 +2,10 @@
 /**
  * Theme setup and supports.
  *
- * @package air-light
+ * @package fair-parent
  **/
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 function theme_setup() {
 
@@ -43,7 +43,7 @@ function build_taxonomies() {
     $file_path = get_theme_file_path( '/inc/taxonomies/' . str_replace( '_', '-', $slug ) . '.php' );
 
     if ( ! file_exists( $file_path ) ) {
-      return new \WP_Error( 'invalid-taxonomy', __( 'The taxonomy class file does not exist.', 'air-light' ), $classname );
+      return new \WP_Error( 'invalid-taxonomy', __( 'The taxonomy class file does not exist.', 'fair-parent-theme' ), $classname );
     }
     // Get the class file, only try to require if not already imported
     if ( ! class_exists( $classname ) ) {
@@ -51,7 +51,7 @@ function build_taxonomies() {
     }
 
     if ( ! class_exists( $classname ) ) {
-      return new \WP_Error( 'invalid-taxonomy', __( 'The taxonomy you attempting to create does not have a class to instance. Possible problems: your configuration does not match the class file name; the class file name does not exist.', 'air-light' ), $classname );
+      return new \WP_Error( 'invalid-taxonomy', __( 'The taxonomy you attempting to create does not have a class to instance. Possible problems: your configuration does not match the class file name; the class file name does not exist.', 'fair-parent-theme' ), $classname );
     }
 
     $taxonomy_class = new $classname( $slug );
@@ -74,7 +74,7 @@ function build_post_types() {
     $file_path = get_theme_file_path( '/inc/post-types/' . str_replace( '_', '-', $slug ) . '.php' );
 
     if ( ! file_exists( $file_path ) ) {
-      return new \WP_Error( 'invalid-cpt', __( 'The custom post type class file does not exist.', 'air-light' ), $classname );
+      return new \WP_Error( 'invalid-cpt', __( 'The custom post type class file does not exist.', 'fair-parent-theme' ), $classname );
     }
     // Get the class file, only try to require if not already imported
     if ( ! class_exists( $classname ) ) {
@@ -82,7 +82,7 @@ function build_post_types() {
     }
 
     if ( ! class_exists( $classname ) ) {
-      return new \WP_Error( 'invalid-cpt', __( 'The custom post type you attempting to create does not have a class to instance. Possible problems: your configuration does not match the class file name; the class file name does not exist.', 'air-light' ), $classname );
+      return new \WP_Error( 'invalid-cpt', __( 'The custom post type you attempting to create does not have a class to instance. Possible problems: your configuration does not match the class file name; the class file name does not exist.', 'fair-parent-theme' ), $classname );
     }
 
     $post_type_class = new $classname( $slug );

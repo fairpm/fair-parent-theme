@@ -2,10 +2,10 @@
 /**
  * The taxonomy class.
  *
- * @package air-light
+ * @package fair-parent
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 /**
  * Registers the Your Taxonomy taxonomy.

@@ -869,7 +869,7 @@ a:focus,button:focus,div[tabindex]:focus,input:focus,select:focus,textarea:focus
   font-size: var(--typography-h4-size);
 }
 
-.acf-block-preview .block,.is-root-container,body:not(.wp-admin) {
+.acf-block-preview .block,.is-root-container,body:not(.wp-admin,.wp-customizer) {
   color: var(--color-paragraph);
   font-family: var(--typography-family-paragraph);
   font-size: var(--typography-paragraph-size);

@@ -8,10 +8,10 @@
  * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2022-02-08 17:03:23
  *
- * @package air-light
+ * @package fair-parent
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 $results = [];
 

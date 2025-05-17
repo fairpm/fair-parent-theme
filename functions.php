@@ -9,15 +9,15 @@
  * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2024-01-10 18:54:48
  *
- * @package air-light
+ * @package fair-parent
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 /**
  * The current version of the theme.
  */
-define( 'AIR_LIGHT_VERSION', '9.5.0' );
+define( 'FAIR_PARENT_VERSION', '9.5.0' );
 
 // We need to have some defaults as comments or empties so let's allow this:
 // phpcs:disable Squiz.Commenting.InlineComment.SpacingBefore, WordPress.Arrays.ArrayDeclarationSpacing.SpaceInEmptyArray
@@ -30,7 +30,7 @@ add_action( 'after_setup_theme', function() {
     /**
      * Theme textdomain
      */
-    'textdomain' => 'air-light',
+    'textdomain' => 'fair-parent-theme',
 
     /**
      * Content width
@@ -44,40 +44,19 @@ add_action( 'after_setup_theme', function() {
     'logo'                    => '/svg/logo.svg',
 
     /**
-     * Custom setting group settings when using Air setting groups plugin.
-     * On multilingual sites using Polylang, translations are handled automatically.
-     */
-    'custom_settings' => [
-      // 'your-custom-setting' => [
-      //   'id' => Your custom setting post id,
-      //   'title' => 'Your custom setting',
-      //   'block-editor' => true,
-      //  ],
-    ],
-
-    'social_media_accounts'  => [
-      // 'twitter' => [
-      //   'title' => 'Twitter',
-      //   'url'   => 'https://twitter.com/digitoimistodude',
-      // ],
-    ],
-
-    /**
      * All links are checked with JS, if those direct to external site and if,
      * indicator of that is included. Exclude domains from that check in this array.
      */
     'external_link_domains_exclude' => [
-      'localhost:3000',
-      'airdev.test',
-      'airwptheme.com',
-      'localhost',
+      'localhost:8888',
+	  'localhost:8889',
     ],
 
     /**
      * Menu locations
      */
     'menu_locations' => [
-      'primary' => __( 'Primary Menu', 'air-light' ),
+      'primary' => __( 'Primary Menu', 'fair-parent-theme' ),
     ],
 
     /**
@@ -100,39 +79,6 @@ add_action( 'after_setup_theme', function() {
       // 'Your_Post_Type',
     ],
 
-    /**
-     * Gutenberg -related settings
-     */
-    // Register custom ACF Blocks
-    'acf_blocks' => [
-      // [
-      //   'name'           => 'block-file-slug',
-      //   'title'          => 'Block Visible Name',
-      //   // You can safely remove lines below if you find no use for them
-      //   'prevent_cache'  => false, // Defaults to false,
-      //   // Icon defaults to svg file inside svg/block-icons named after the block name,
-      //   // eg. svg/block-icons/block-file-slug.svg
-      //   //
-      //   // Icon setting defines the dashicon equivalent: https://developer.wordpress.org/resource/dashicons/#block-default
-      //   // 'icon'  => 'block-default',
-      // ],
-    ],
-
-    // Custom ACF block default settings
-    'acf_block_defaults' => [
-      'category'          => 'air-light',
-      'mode'              => 'auto',
-      'align'             => 'full',
-      'post_types'        => [
-        'page',
-      ],
-      'supports'  => [
-        'align'           => false,
-        'anchor'          => true,
-        'customClassName' => false,
-      ],
-      'render_callback'   => __NAMESPACE__ . '\render_acf_block',
-    ],
 
     // Restrict to only selected blocks
     //
@@ -159,18 +105,6 @@ add_action( 'after_setup_theme', function() {
         'core/textColumns',
       ],
       'page' => [],
-      // 'page' => [
-      //   'all-acf-blocks',
-      //   'core/paragraph',
-      // ],
-      // 'post-type' => [
-      //   'acf/content-image',
-      //   'core/paragraph',
-      // ],
-      // 'example' => [
-      //   'all-core-blocks',
-      //   'acf/content-image',
-      // ],
     ],
 
     // If you want to use classic editor somewhere, define it here
@@ -180,7 +114,7 @@ add_action( 'after_setup_theme', function() {
     'my_custom_setting' => true,
   ];
 
-  $theme_settings = apply_filters( 'air_light_theme_settings', $theme_settings );
+  $theme_settings = apply_filters( 'fair_parent_theme_settings', $theme_settings );
 
   define( 'THEME_SETTINGS', $theme_settings );
 } ); // end action after_setup_theme

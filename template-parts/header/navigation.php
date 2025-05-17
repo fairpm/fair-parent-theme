@@ -2,10 +2,10 @@
 /**
  * Navigation layout.
  *
- * @package air-light
+ * @package fair-parent
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 ?>
 

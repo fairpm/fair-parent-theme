@@ -2,16 +2,16 @@
 /**
  * ACF Blocks related hooks.
  *
- * @package air-light
+ * @package fair-parent
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 function acf_blocks_add_category_in_gutenberg( $categories, $post ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed
   return array_merge( $categories, [
     [
-      'slug'  => 'air-light',
-      'title' => __( 'Theme blocks', 'air-light' ),
+      'slug'  => 'fair-parent-theme',
+      'title' => __( 'Theme blocks', 'fair-parent-theme' ),
     ],
   ] );
 } // end acf_blocks_add_category_in_gutenberg
@@ -41,7 +41,7 @@ function acf_blocks_init() {
     // Check if icon is set, otherwise try to load svg icon
     if ( ! isset( $block['icon'] ) || empty( $block['icon'] ) ) {
       $icon_path = get_theme_file_path( "svg/block-icons/{$block['name']}.svg" );
-      $icon_path = apply_filters( 'air_light_acf_block_icon', $icon_path, $block['name'], $block );
+      $icon_path = apply_filters( 'fair_parent_acf_block_icon', $icon_path, $block['name'], $block );
 
       if ( file_exists( $icon_path ) ) {
         $block['icon'] = get_acf_block_icon_str( $icon_path );

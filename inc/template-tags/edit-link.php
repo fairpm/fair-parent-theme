@@ -4,11 +4,11 @@
  *
  * This function shows edit links.
  *
- * @package air-light
+ * @package fair-parent
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 function air_edit_link() {
 

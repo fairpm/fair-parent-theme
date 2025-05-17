@@ -2,10 +2,10 @@
 /**
  * Site branding & logo
  *
- * @package air-light
+ * @package fair-parent
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 $description = get_bloginfo( 'description', 'display' );
 ?>

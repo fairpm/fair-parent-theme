@@ -7,11 +7,11 @@
  * @Last Modified by:   Timi Wahalahti
  * @Last Modified time: 2019-10-15 14:35:42
  *
- * @package air-light
+ * @package fair-parent
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
   return;

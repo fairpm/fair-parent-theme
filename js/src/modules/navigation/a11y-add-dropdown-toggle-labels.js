@@ -14,7 +14,7 @@ function a11yAddDropdownToggleLabels(items) {
 
     // Add the aria-label to the dropdown button
     // eslint-disable-next-line camelcase, no-undef
-    dropdownButton.setAttribute('aria-label', `${air_light_screenReaderText.expand_for} ${linkText}`);
+    dropdownButton.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${linkText}`);
   });
 }
 

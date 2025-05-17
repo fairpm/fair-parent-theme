@@ -11,11 +11,11 @@
  * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2022-02-08 17:03:18
  *
- * @package air-light
+ * @package fair-parent
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 get_header(); ?>
 

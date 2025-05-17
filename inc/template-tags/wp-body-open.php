@@ -2,10 +2,10 @@
 /**
  * Function wp_body_open.
  *
- * @package air-light
+ * @package fair-parent
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 if ( ! function_exists( 'wp_body_open' ) ) {
 	/**

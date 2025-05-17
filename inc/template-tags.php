@@ -4,11 +4,11 @@
  *
  * The file for template related things.
  *
- * @package air-light
+ * @package fair-parent
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 require get_theme_file_path( '/inc/template-tags/acf-blocks.php' );
 require get_theme_file_path( '/inc/template-tags/entry-footer.php' );

@@ -2,10 +2,10 @@
 /**
  * Forms related hooks.
  *
- * @package air-light
+ * @package fair-parent
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 // Always set Output CSS setting to No. We want to use our own _gravity-forms.scss
 function dequeue_gf_stylesheets() {

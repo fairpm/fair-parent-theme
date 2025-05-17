@@ -4,10 +4,10 @@
  *
  * All hooks that are run in the theme are listed here
  *
- * @package air-light
+ * @package fair-parent
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 /**
  * Enable search view

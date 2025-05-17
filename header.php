@@ -4,10 +4,10 @@
  *
  * <head> section and everything up until <div id="content">
  *
- * @package air-light
+ * @package fair-parent
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 ?>
 

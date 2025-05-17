@@ -2,10 +2,10 @@
 /**
  * Localization strings.
  *
- * @package air-light
+ * @package fair-parent
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 add_filter( 'air_helper_pll_register_strings', function() {
   $strings = [
@@ -20,33 +20,33 @@ add_filter( 'air_helper_pll_register_strings', function() {
   // $strings[ "Accessibility: {$key}" ] = $value;
   // }
 
-  return apply_filters( 'air_light_translations', $strings );
+  return apply_filters( 'fair_parent_translations', $strings );
 } );
 
 function get_default_localization_strings( $language = 'en' ) {
   $strings = [
     'en'  => [
-      'Add a menu'                                   => __( 'Add a menu', 'air-light' ),
-      'Open main menu'                               => __( 'Open main menu', 'air-light' ),
-      'Close main menu'                              => __( 'Close main menu', 'air-light' ),
-      'Main navigation'                              => __( 'Main navigation', 'air-light' ),
-      'Back to top'                                  => __( 'Back to top', 'air-light' ),
-      'Open child menu for'                          => __( 'Open child menu for', 'air-light' ),
-      'Close child menu for'                         => __( 'Close child menu for', 'air-light' ),
-      'Skip to content'                              => __( 'Skip to content', 'air-light' ),
-      'Skip over the carousel element'               => __( 'Skip over the carousel element', 'air-light' ),
-      'External site'                                => __( 'External site', 'air-light' ),
-      'opens in a new window'                        => __( 'opens in a new window', 'air-light' ),
-      'Page not found.'                              => __( 'Page not found.', 'air-light' ),
-      'The reason might be mistyped or expired URL.' => __( 'The reason might be mistyped or expired URL.', 'air-light' ),
-      'Search'                                       => __( 'Search', 'air-light' ),
-      'Block missing required data'                  => __( 'Block missing required data', 'air-light' ),
-      'This error is shown only for logged in users' => __( 'This error is shown only for logged in users', 'air-light' ),
-      'No results found for your search'             => __( 'No results found for your search', 'air-light' ),
-      'Edit'                                         => __( 'Edit', 'air-light' ),
-      'Previous slide'                               => __( 'Previous slide', 'air-light' ),
-      'Next slide'                                   => __( 'Next slide', 'air-light' ),
-      'Last slide'                                   => __( 'Last slide', 'air-light' ),
+      'Add a menu'                                   => __( 'Add a menu', 'fair-parent-theme' ),
+      'Open main menu'                               => __( 'Open main menu', 'fair-parent-theme' ),
+      'Close main menu'                              => __( 'Close main menu', 'fair-parent-theme' ),
+      'Main navigation'                              => __( 'Main navigation', 'fair-parent-theme' ),
+      'Back to top'                                  => __( 'Back to top', 'fair-parent-theme' ),
+      'Open child menu for'                          => __( 'Open child menu for', 'fair-parent-theme' ),
+      'Close child menu for'                         => __( 'Close child menu for', 'fair-parent-theme' ),
+      'Skip to content'                              => __( 'Skip to content', 'fair-parent-theme' ),
+      'Skip over the carousel element'               => __( 'Skip over the carousel element', 'fair-parent-theme' ),
+      'External site'                                => __( 'External site', 'fair-parent-theme' ),
+      'opens in a new window'                        => __( 'opens in a new window', 'fair-parent-theme' ),
+      'Page not found.'                              => __( 'Page not found.', 'fair-parent-theme' ),
+      'The reason might be mistyped or expired URL.' => __( 'The reason might be mistyped or expired URL.', 'fair-parent-theme' ),
+      'Search'                                       => __( 'Search', 'fair-parent-theme' ),
+      'Block missing required data'                  => __( 'Block missing required data', 'fair-parent-theme' ),
+      'This error is shown only for logged in users' => __( 'This error is shown only for logged in users', 'fair-parent-theme' ),
+      'No results found for your search'             => __( 'No results found for your search', 'fair-parent-theme' ),
+      'Edit'                                         => __( 'Edit', 'fair-parent-theme' ),
+      'Previous slide'                               => __( 'Previous slide', 'fair-parent-theme' ),
+      'Next slide'                                   => __( 'Next slide', 'fair-parent-theme' ),
+      'Last slide'                                   => __( 'Last slide', 'fair-parent-theme' ),
     ],
     'fi'  => [
       'Add a menu'                                   => 'Luo uusi valikko',

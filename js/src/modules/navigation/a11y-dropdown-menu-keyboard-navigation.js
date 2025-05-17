@@ -38,7 +38,7 @@ function a11yDropdownMenuKeyboardNavigation(items, focusableElements) {
 
             // Change toggle button aria-label
             // eslint-disable-next-line camelcase, no-undef
-            previousItem.querySelector('.dropdown-toggle').setAttribute('aria-label', `${air_light_screenReaderText.expand_for} ${previousItem.querySelector('.dropdown-item').innerText}`);
+            previousItem.querySelector('.dropdown-toggle').setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${previousItem.querySelector('.dropdown-item').innerText}`);
 
             // Change toggle button aria-expanded
             previousItem
@@ -98,14 +98,14 @@ function a11yDropdownMenuKeyboardNavigation(items, focusableElements) {
 
           // Set aria-label of the dropdown button
           // eslint-disable-next-line camelcase, no-undef
-          thisElement.setAttribute('aria-label', `${air_light_screenReaderText.collapse_for} ${linkLabel}`);
+          thisElement.setAttribute('aria-label', `${fair_parent_screenReaderText.collapse_for} ${linkLabel}`);
         } else {
           // Set aria-expanded to false
           thisElement.setAttribute('aria-expanded', 'false');
 
           // Set aria-label of the dropdown button
           // eslint-disable-next-line camelcase, no-undef
-          thisElement.setAttribute('aria-label', `${air_light_screenReaderText.expand_for} ${linkLabel}`);
+          thisElement.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${linkLabel}`);
         }
 
         // Toggle the dropdown
@@ -169,7 +169,7 @@ function a11yDropdownMenuKeyboardNavigation(items, focusableElements) {
 
         // Set aria label attribute
         // eslint-disable-next-line camelcase, no-undef
-        dropdownToggleButton.setAttribute('aria-label', `${air_light_screenReaderText.expand_for} ${linkLabel}`);
+        dropdownToggleButton.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${linkLabel}`);
 
         // If we're on button, add aria-expanded to false
         if (thisElement.classList.contains('dropdown-toggle')) {
@@ -177,7 +177,7 @@ function a11yDropdownMenuKeyboardNavigation(items, focusableElements) {
 
           // Set aria-label of the dropdown button
           // eslint-disable-next-line camelcase, no-undef
-          thisElement.setAttribute('aria-label', `${air_light_screenReaderText.expand_for} ${linkLabel}`);
+          thisElement.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${linkLabel}`);
         }
 
         // Move focus back to previous .dropdown-toggle, but only if we're not on main level
@@ -239,7 +239,7 @@ function a11yDropdownMenuKeyboardNavigation(items, focusableElements) {
 
           // Set aria-label of the dropdown button
           // eslint-disable-next-line camelcase, no-undef
-          thisElement.setAttribute('aria-label', `${air_light_screenReaderText.expand_for} ${linkLabel}`);
+          thisElement.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${linkLabel}`);
 
           // Move focus back to previous .dropdown-toggle
           dropdownToggleButton.focus();
@@ -440,7 +440,7 @@ function a11yDropdownMenuKeyboardNavigation(items, focusableElements) {
 
           // Set aria-label of the dropdown button
           // eslint-disable-next-line camelcase, no-undef
-          thisElement.setAttribute('aria-label', `${air_light_screenReaderText.expand_for} ${linkLabel}`);
+          thisElement.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${linkLabel}`);
 
           // Move focus back to previous .dropdown-toggle
           dropdownToggleButton.focus();

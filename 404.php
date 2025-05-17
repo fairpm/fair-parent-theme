@@ -6,11 +6,11 @@
  * @Last Modified by:   Timi Wahalahti
  * @Last Modified time: 2021-01-12 15:13:28
  *
- * @package air-light
+ * @package fair-parent
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 get_header(); ?>
 

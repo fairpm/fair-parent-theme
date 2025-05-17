@@ -5,7 +5,7 @@
  * @package projektiasema
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 /**
  * A custom WordPress nav walker class, using the WordPress built in menu manager.

@@ -6,11 +6,11 @@
  * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2022-09-07 11:57:39
  *
- * @package air-light
+ * @package fair-parent
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  */
 
-namespace Air_Light;
+namespace Fair_Parent;
 
 the_post();
 get_header(); ?>
@@ -25,12 +25,12 @@ get_header(); ?>
       <?php the_content();
 
       // Required by WordPress Theme Check, feel free to remove as it's rarely used in starter themes
-      wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'air-light' ), 'after' => '</div>' ) );
+      wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fair-parent-theme' ), 'after' => '</div>' ) );
 
       entry_footer();
 
       if ( get_edit_post_link() ) {
-        edit_post_link( sprintf( wp_kses( __( 'Edit <span class="screen-reader-text">%s</span>', 'air-light' ), [ 'span' => [ 'class' => [] ] ] ), get_the_title() ), '<p class="edit-link">', '</p>' );
+        edit_post_link( sprintf( wp_kses( __( 'Edit <span class="screen-reader-text">%s</span>', 'fair-parent-theme' ), [ 'span' => [ 'class' => [] ] ] ), get_the_title() ), '<p class="edit-link">', '</p>' );
       }
 
       the_post_navigation();

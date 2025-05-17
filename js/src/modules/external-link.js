@@ -73,8 +73,8 @@ export function styleExternalLinks() {
     window.location.host,
   ];
 
-  if (typeof window.air_light_externalLinkDomains !== 'undefined') {
-    localDomains = localDomains.concat(window.air_light_externalLinkDomains);
+  if (typeof window.fair_parent_externalLinkDomains !== 'undefined') {
+    localDomains = localDomains.concat(window.fair_parent_externalLinkDomains);
   }
 
   const links = document.querySelectorAll('a');

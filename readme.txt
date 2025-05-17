@@ -1,26 +1,20 @@
-=== air-light ===
+=== fair-parent ===
 
-Air-light WordPress Theme, Copyright 2018 Digitoimisto Dude Oy, Roni Laukkarinen
-Air-light is distributed under the terms of the MIT License
+Fair Parent WordPress Theme
 
-Bundled header image, Copyright Brady Bellini
-License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
-Source: https://stocksnap.io/photo/nature-mountains-3T1GEXSD0R
-
-Contributors: Digitoimisto Dude Oy
+Contributors: Digitoimisto Dude Oy, joedolson
 Tags: one-column, accessibility-ready, translation-ready
 
 Requires at least: 5.0
-Tested up to: 6.7.2
-Stable tag: 9.5.0
+Tested up to: 6.8
+Stable tag: 1.0.0
 License: MIT License
 License URI: https://opensource.org/licenses/MIT
 
-A starter theme called air-light.
+Fair network parent theme..
 
 == Description ==
 
-Air starter theme is built to be very straightforward, front end developer friendly and only partly modular by its structure.
 
 == Installation ==
 
@@ -32,16 +26,14 @@ Or just get from GitHub: https://github.com/digitoimistodude/air-light
 
 == Frequently Asked Questions ==
 
-= Does this theme support any plugins? =
-
-Yes. There's also a extender, helper plugin Air Helper: https://github.com/digitoimistodude/air-helper
 
 == Changelog ==
 
-= 1.0 - 29 Jan 2016 =
-* Initial release
+= 1.0 - 2025-05-16 =
+* Initial dev
 
 == Credits ==
 
 * Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* Forked from Air Light https://wordpress.org/themes/air-light/, (C) 2018 Digitoimisto Dude Oy, Roni Laukkarinen, MIT License
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
