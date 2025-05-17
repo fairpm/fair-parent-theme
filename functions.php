@@ -59,27 +59,6 @@ add_action( 'after_setup_theme', function() {
       'primary' => __( 'Primary Menu', 'fair-parent-theme' ),
     ],
 
-    /**
-     * Taxonomies
-     *
-     * See the instructions:
-     * https://github.com/digitoimistodude/air-light#custom-taxonomies
-     */
-    'taxonomies' => [
-      // 'Your_Taxonomy' => [ 'post', 'page' ],
-    ],
-
-    /**
-     * Post types
-     *
-     * See the instructions:
-     * https://github.com/digitoimistodude/air-light#custom-post-types
-     */
-    'post_types' => [
-      // 'Your_Post_Type',
-    ],
-
-
     // Restrict to only selected blocks
     //
     // Options: 'none', 'all', 'all-core-blocks',
@@ -145,17 +124,3 @@ require get_theme_file_path( '/inc/template-tags.php' );
 // Run theme setup
 add_action( 'after_setup_theme', __NAMESPACE__ . '\theme_setup' );
 add_action( 'after_setup_theme', __NAMESPACE__ . '\build_theme_support' );
-
-/*
- * First: we register the taxonomies and post types after setup theme
- * If air-helper loads (for translations), we unregister the original taxonomies and post types
- * and reregister them with the translated ones.
- *
- * This allows the slugs translations to work before the translations are available,
- * and for the label translations to work if they are available.
- */
-add_action( 'after_setup_theme', __NAMESPACE__ . '\build_taxonomies' );
-add_action( 'after_setup_theme', __NAMESPACE__ . '\build_post_types' );
-
-add_action( 'after_air_helper_init', __NAMESPACE__ . '\rebuild_taxonomies' );
-add_action( 'after_air_helper_init', __NAMESPACE__ . '\rebuild_post_types' );
