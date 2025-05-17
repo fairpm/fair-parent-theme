@@ -1,0 +1,91 @@
+// A hidden screen reader texts for readers, focus elements for
+// vision impaired and other useful a11y CSS hacks.
+
+// Text meant only for screen readers.
+@mixin screen-reader-text() {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+
+  // doiuse-disable
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+
+  // Many screen reader and browser combinations announce broken words as they would appear visually.
+  // stylelint-disable-next-line declaration-no-important, max-line-length
+  word-wrap: normal !important;
+
+  // Focused on mouse (it never can be focused via mouse, because it's already invisible)
+  &:focus {
+    opacity: 0;
+  }
+
+  // Focused on keyboard
+  &:focus-visible {
+    background-color: var(--color-white);
+    border-radius: 0;
+    box-shadow: 0 0 2px 2px rgb(22 22 22 / .6);
+    clip: auto;
+    clip-path: none;
+    display: block;
+    font-size: 1.0625rem;
+    font-weight: var(--typography-weight-bold);
+    height: auto;
+    left: 0.3125rem;
+    line-height: normal;
+    opacity: 1;
+    padding: 0.9375rem 1.4375rem 0.875rem;
+    text-decoration: none;
+    top: 0.3125rem;
+    width: auto;
+    z-index: 100000; // Above WP toolbar.
+  }
+}
+
+.screen-reader-text {
+  @include screen-reader-text();
+}
+
+.skip-link {
+  margin: 0.3125rem;
+}
+
+// Visually distinct focus color on keyboard
+a:focus,
+input:focus,
+button:focus,
+select:focus,
+textarea:focus,
+div[tabindex]:focus {
+  // Make sure every focusable element has opacity 100%
+  opacity: 1;
+
+  // Make sure it's not glued to the element
+  outline-offset: 0.3125rem;
+}
+
+// Make focus a little more engaging
+// @source https://twitter.com/argyleink/status/1387072095159406596
+// @link https://codepen.io/argyleink/pen/JjEzeLp
+@media (prefers-reduced-motion: no-preference) {
+  *:focus {
+    transition: outline-offset .25s ease;
+  }
+}
+
+// External link icon
+.external-link-icon {
+  margin-left: 0.4375rem;
+  margin-right: 2px;
+
+  @media (max-width: $container-mobile) {
+    height: 0.75rem;
+    margin-left: 4px;
+    transform: translateY(1px);
+    width: 0.75rem;
+  }
+}

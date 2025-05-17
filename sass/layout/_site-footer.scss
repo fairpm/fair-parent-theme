@@ -1,0 +1,63 @@
+// The very bottom of the site. Usually contains supporting
+// or secondary navigation, social media icons, contact details
+// and such.
+
+// Please note: These are mostly for demo purposes
+// so feel free to remove everything in this file
+// and start over.
+.site-footer {
+  // Making sure the footer background is white, even on WordPress.org
+  background-color: var(--color-white);
+  clear: both;
+  color: var(--color-paragraph);
+  overflow: hidden;
+  padding: 3.75rem 1.25rem;
+  text-align: center;
+
+  .wordpress-logo {
+    display: block;
+    margin-bottom: 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  span {
+    display: block;
+    text-align: center;
+  }
+
+  svg {
+    margin-right: 0.3125rem;
+    position: relative;
+  }
+
+  .powered-by-wordpress {
+    display: inline-block;
+    font-weight: var(--typography-weight-semibold);
+    margin-bottom: 0.625rem;
+    text-align: center;
+  }
+
+  .github-link {
+    margin-left: 0.5rem;
+    margin-top: 4px;
+    overflow: hidden;
+    padding-bottom: 4px;
+    position: relative;
+  }
+
+  .theme-info {
+    align-items: center;
+    color: var(--color-paragraph);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 1.5;
+    margin: 0 auto;
+    text-align: center;
+
+    i {
+      margin: 0 0.3125rem;
+    }
+  }
+}

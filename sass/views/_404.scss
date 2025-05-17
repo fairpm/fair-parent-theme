@@ -1,0 +1,19 @@
+// Error 404 title
+.block-error-404 {
+  .container {
+    @media (min-width: $container-mobile) {
+      padding-bottom: 10%;
+      padding-top: 10%;
+    }
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: clamp-calc($container-mobile, 1600px, 60px, 120px);
+    line-height: var(--typography-heading-core-line-height);
+    margin-bottom: 1.25rem;
+  }
+}

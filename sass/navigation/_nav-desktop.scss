@@ -1,0 +1,338 @@
+// stylelint-disable a11y/no-display-none, plugin/file-max-lines
+// Navigation for large screens
+// CSS variables
+:root {
+
+  // Affecting to both main and sub-levels
+  --color-dropdown-toggle: var(--color-valhalla);
+  --color-current: var(--color-link-text);
+  --dropdown-toggle-size: 0.75rem;
+
+  // Main level items on desktop
+  --typography-size-main-level: var(--typography-size-16);
+  --typography-weight-main-level: var(--typography-weight-bold);
+  --padding-main-level-horizontal: 0;
+  --padding-main-level-vertical: 0.375rem;
+  --color-main-level: var(--color-black);
+  --color-hover-main-level: var(--color-link-text);
+  --gap-between-dropdown-toggle: 0.9375rem;
+  --gap-main-level-horizontal: 1.5625rem;
+
+  // Sub menu items on desktop
+  --typography-size-sub-menu: var(--typography-size-16);
+  --typography-weight-sub-menu: var(--typography-weight-regular);
+  --padding-sub-menu-vertical: 0.375rem;
+  --padding-sub-menu-link-vertical: 0.3125rem;
+  --padding-sub-menu-link-horizontal: 0.9375rem;
+  --width-sub-menu: 12.5rem;
+  --color-sub-menu: var(--color-valhalla);
+  --color-hover-sub-menu: var(--color-valhalla);
+  --color-background-sub-menu: var(--color-white);
+  --gap-dropdown: 0.625rem;
+}
+
+// General navigation resets
+.site-header ul {
+  list-style: none;
+}
+
+@media only screen and (min-width: $width-max-mobile) {
+  // Need to use display: none here to make sure mobile nav-toggle is visually hidden on desktop
+  .nav-toggle {
+    display: none;
+  }
+
+  // Navigation wrapper
+  .nav-primary {
+    line-height: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  // Navigation unordered list wrapper element
+  .menu-items {
+    align-items: center;
+    background-color: transparent;
+    column-gap: var(--gap-main-level-horizontal);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    row-gap: .625rem;
+  }
+
+  // Navigation list item
+  .menu-item {
+    margin: 0;
+    position: relative;
+  }
+
+  // Menu items
+  .menu-item-clickable,
+  .menu-item > a {
+    align-items: center;
+    color: var(--color-main-level);
+    display: inline-flex;
+    font-size: var(--typography-size-main-level);
+    font-weight: var(--typography-weight-main-level);
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: var(--padding-main-level-vertical);
+    padding-left: var(--padding-main-level-horizontal);
+    padding-right: var(--padding-main-level-horizontal);
+    padding-top: var(--padding-main-level-vertical);
+    white-space: nowrap;
+  }
+
+  .menu-item .sub-menu a {
+    align-items: center;
+    color: var(--color-sub-menu);
+    display: inline-flex;
+    font-size: var(--typography-size-sub-menu);
+    font-weight: var(--typography-weight-sub-menu);
+    line-height: 1.5;
+    padding-bottom: var(--padding-sub-menu-link-vertical);
+    padding-left: var(--padding-sub-menu-link-horizontal);
+    padding-right: var(--padding-sub-menu-link-horizontal);
+    padding-top: var(--padding-sub-menu-link-vertical);
+    white-space: normal;
+    width: 100%;
+  }
+
+  // Current menu item color
+  .menu-item.current-menu-parent > a,
+  .menu-item.current-menu-item > a {
+    color: var(--color-current);
+  }
+
+  // Let's make space for the nav-toggle/arrow
+  .menu-item.menu-item-has-children a {
+    transition: background-color .2s cubic-bezier(.19, 1, .22, 1);
+  }
+
+  .menu-item > a:hover,
+  .menu-item > a:focus {
+    color: var(--color-hover-main-level);
+  }
+
+  .menu-item .sub-menu a:hover,
+  .menu-item .sub-menu a:focus {
+    color: var(--color-hover-sub-menu);
+  }
+
+  // Create animation illusion
+  .menu-item.menu-item-has-children.hover-intent .sub-menu a,
+  .menu-item.menu-item-has-children:focus .sub-menu a {
+    padding-bottom: var(--padding-sub-menu-link-vertical);
+    padding-top: var(--padding-sub-menu-link-vertical);
+  }
+
+  .menu-item.menu-item-has-children.hover-intent .sub-menu,
+  .menu-item.menu-item-has-children:focus .sub-menu {
+    padding-bottom: var(--padding-sub-menu-vertical);
+    padding-top: var(--padding-sub-menu-vertical);
+  }
+
+  .nav-primary > ul:first-of-type > .menu-item-has-children:focus::before,
+  .nav-primary > ul:first-of-type > .menu-item-has-children:hover::before {
+    transform: scale(1);
+    transition: all .2s cubic-bezier(.19, 1, .22, 1);
+  }
+
+
+  // stop flash of submenus on page load, reduce CLS
+  // add progressive enhancement for no JS
+  .no-js {
+
+    // pretend its out of viewport since we cant measure it
+    .sub-menu {
+      display: none;
+      left: unset;
+      right: 0;
+
+      // All dropdowns in level 2 and after
+      .sub-menu {
+        left: unset;
+        right: 100%;
+      }
+    }
+
+    .menu-item-has-children:focus,
+    .menu-item-has-children:focus-within,
+    .menu-item-has-children:hover {
+      & > .sub-menu {
+        display: block;
+      }
+    }
+  }
+
+  // Progressive enhancement: Dropdown toggle with js enabled
+  .js {
+    .sub-menu {
+      margin-top: var(--gap-dropdown);
+      opacity: 0;
+      visibility: hidden;
+
+      // All dropdowns in level 2 and after
+      .sub-menu {
+        margin-top: calc(-1 * var(--padding-sub-menu-vertical));
+      }
+    }
+  }
+
+  // Dropdowns
+  .sub-menu {
+    background-color: var(--color-background-sub-menu);
+    border: 1px solid var(--color-black);
+    left: 0;
+    margin-left: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    position: absolute;
+    top: 100%;
+    transition: all .2s cubic-bezier(.19, 1, .22, 1);
+    width: var(--width-sub-menu);
+    z-index: 9;
+
+    // If dropdown is out of viewport from the right, move it to the left
+    &.is-out-of-viewport {
+      left: unset;
+      right: 0;
+
+      // All dropdowns in level 2 and after
+      .sub-menu {
+        left: unset;
+        right: 100%;
+      }
+    }
+
+    // If main level is not out of viewport but if sub-menu under it is
+    .sub-menu.is-out-of-viewport {
+      left: unset;
+      right: 100%;
+    }
+
+    // All dropdowns in level 2 and after
+    .sub-menu {
+      left: 100%;
+      margin-left: 0;
+      top: 0;
+    }
+
+    li {
+      padding: 0;
+    }
+  }
+
+  // This is where the magic happens
+  .menu-item-has-children:focus > .sub-menu,
+  .menu-item-has-children.hover-intent > .sub-menu {
+    opacity: 1;
+    transform: translateY(0%);
+    visibility: visible;
+    z-index: 12;
+  }
+
+  .menu-item-has-children:focus .sub-menu .sub-menu,
+  .menu-item-has-children.hover-intent .sub-menu .sub-menu {
+    margin-top: calc(-1 * var(--padding-sub-menu-vertical));
+    top: 0;
+    z-index: 10;
+  }
+
+  // Sub menu items that have items under them
+  .menu-item.menu-item-has-children {
+    align-items: center;
+    display: flex;
+    gap: var(--gap-between-dropdown-toggle);
+    justify-content: space-between;
+    position: relative;
+
+    // Add a "safe area" pseudo element to fill the gap
+    // between menu item and sub menu to help hovering
+    &::after {
+      content: '';
+      display: block;
+      height: var(--gap-dropdown);
+      max-width: var(--width-sub-menu);
+      position: absolute;
+      top: 100%;
+      visibility: hidden;
+      width: 100%;
+    }
+  }
+
+  // Ensure "safe area" is visible only after triggering submenu with mouse
+  .menu-item.menu-item-has-children.hover-intent::after {
+    visibility: visible;
+
+    // Make sure it's on top of everything
+    z-index: 100;
+  }
+
+  // Toggle icon dimensions on desktop
+  .dropdown-toggle svg {
+    height: var(--dropdown-toggle-size);
+    transition: all .35s cubic-bezier(.19, 1, .22, 1);
+    width: var(--dropdown-toggle-size);
+  }
+
+  // Main level toggle icon
+  .hover-intent > .dropdown-toggle svg {
+    transform: rotateX(180deg);
+  }
+
+  .dropdown-toggle {
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    color: var(--color-dropdown-toggle);
+    display: inline-flex;
+    justify-content: center;
+    padding: 0;
+    pointer-events: none;
+  }
+
+  // Sub-menu toggle icon
+  .sub-menu .dropdown-toggle {
+    width: 1.875rem;
+  }
+
+  .sub-menu .dropdown-toggle svg {
+    transform: rotate(-90deg) rotateX(0deg);
+  }
+
+  .sub-menu .hover-intent > .dropdown-toggle > svg {
+    transform: rotate(-90deg) rotateX(180deg);
+  }
+
+  // Don't use gap filler in sub menu items
+  // Acceptable use of display: none here, for visual/technical purposes
+  .sub-menu .menu-item-has-children::after {
+    display: none;
+  }
+
+  // Smooth animation
+  .menu-item.menu-item-has-children.hover-intent > .dropdown-toggle svg,
+  .menu-item.menu-item-has-children:focus > .dropdown-toggle svg {
+    transform: translateY(0%) rotate(180deg);
+  }
+
+  // Smooth animation
+  // stylelint-disable-next-line selector-max-specificity, selector-max-class
+  .menu-item.menu-item-has-children .menu-item.menu-item-has-children.hover-intent > .dropdown-toggle svg,
+  .menu-item.menu-item-has-children .menu-item.menu-item-has-children:focus > .dropdown-toggle svg {
+    transform: translateY(0%) rotate(90deg);
+  }
+
+  @media only screen and (max-width: $width-max-mobile) {
+    ul li:focus > ul,
+    ul li:hover > ul {
+      display: block;
+    }
+  }
+}
