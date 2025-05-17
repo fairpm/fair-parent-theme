@@ -45,16 +45,16 @@ function enqueue_theme_scripts() {
   }
 
   wp_localize_script( 'scripts', 'fair_parent_screenReaderText', [
-    'expand_for'      => get_default_localization( 'Open child menu for' ),
-    'collapse_for'    => get_default_localization( 'Close child menu for' ),
-    'expand_toggle'   => get_default_localization( 'Open main menu' ),
-    'collapse_toggle' => get_default_localization( 'Close main menu' ),
-    'external_link'   => get_default_localization( 'External site' ),
-    'target_blank'    => get_default_localization( 'opens in a new window' ),
-    'previous_slide'  => get_default_localization( 'Previous slide' ),
-    'next_slide'      => get_default_localization( 'Next slide' ),
-    'last_slide'      => get_default_localization( 'Last slide' ),
-    'skip_slider'     => get_default_localization( 'Skip over the carousel element' ),
+    'expand_for'      => __( 'Open child menu for', 'fair-parent-theme' ),
+    'collapse_for'    => __( 'Close child menu for', 'fair-parent-theme' ),
+    'expand_toggle'   => __( 'Open main menu', 'fair-parent-theme' ),
+    'collapse_toggle' => __( 'Close main menu', 'fair-parent-theme' ),
+    'external_link'   => __( 'External site', 'fair-parent-theme' ),
+    'target_blank'    => __( 'opens in a new window', 'fair-parent-theme' ),
+    'previous_slide'  => __( 'Previous slide', 'fair-parent-theme' ),
+    'next_slide'      => __( 'Next slide', 'fair-parent-theme' ),
+    'last_slide'      => __( 'Last slide', 'fair-parent-theme' ),
+    'skip_slider'     => __( 'Skip over the carousel element', 'fair-parent-theme' ),
   ] );
 
   // Add domains/hosts to disable external link indicators

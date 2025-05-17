@@ -5,8 +5,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
  * @Date:   2019-10-15 12:30:02
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-02-08 17:03:23
+ * @Last Modified by:   Joe Dolson
+ * @Last Modified time: 2025-05-17 03:28
  *
  * @package fair-parent
  */
@@ -42,7 +42,7 @@ get_header(); ?>
   <section class="block block-search">
     <div class="container">
 
-      <h1><?php echo esc_html( get_default_localization( 'Search' ) ); ?></h1>
+      <h1><?php esc_html_e( 'Search', 'fair-parent-theme' ); ?></h1>
       <?php get_search_form( true ); ?>
 
     </div>
@@ -89,7 +89,7 @@ get_header(); ?>
   if ( ! empty( $_GET['s'] ) && ! have_posts() ) : ?>
     <section class="block block-search-results">
       <div class="container">
-        <h2><?php echo esc_html( get_default_localization( 'No results found for your search' ) ); ?>.</h2>
+        <h2><?php esc_html_e( 'No results found for your search', 'fair-parent-theme' ); ?>.</h2>
       </div>
     </section>
   <?php endif; ?>

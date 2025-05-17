@@ -18,7 +18,7 @@ function air_edit_link() {
 
     <p class="edit-link">
       <a href="<?php echo esc_url( get_edit_post_link() ); ?>">
-        <?php echo esc_html( get_default_localization( 'Edit' ) ); ?>
+        <?php esc_html_e( 'Edit', 'fair-parent-theme' ); ?>
         <span class="screen-reader-text"><?php echo esc_html( get_the_title() ); ?></span>
       </a>
     </p>

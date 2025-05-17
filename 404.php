@@ -20,9 +20,9 @@ get_header(); ?>
     <div class="container">
       <div class="content">
 
-        <h1 id="content">404 <span class="screen-reader-text"><?php echo esc_html( get_default_localization( 'Page not found.' ) ); ?></span></h1>
-        <h2 aria-hidden="true"><?php echo esc_html( get_default_localization( 'Page not found.' ) ); ?></h2>
-        <p><?php echo esc_html( get_default_localization( 'The reason might be mistyped or expired URL.' ) ); ?></p>
+        <h1 id="content">404 <span class="screen-reader-text"><?php echo esc_html__( 'Page not found.', 'fair-parent-theme' ); ?></span></h1>
+        <h2 aria-hidden="true"><?php echo esc_html__( 'Page not found.', 'fair-parent-theme' ); ?></h2>
+        <p><?php echo esc_html__( 'The reason might be mistyped or expired URL.', 'fair-parent-theme' ); ?></p>
 
       </div>
     </div>

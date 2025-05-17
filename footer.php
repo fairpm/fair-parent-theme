@@ -43,7 +43,7 @@ namespace Fair_Parent;
   class="top no-external-link-indicator"
   data-version="<?php echo esc_attr( FAIR_PARENT_VERSION ); ?>"
 >
-  <span class="screen-reader-text"><?php echo esc_html( get_default_localization( 'Back to top' ) ); ?></span>
+  <span class="screen-reader-text"><?php esc_html_e( 'Back to top', 'fair-parent-theme' ); ?></span>
   <span aria-hidden="true">&uarr;</span>
 </a>
 

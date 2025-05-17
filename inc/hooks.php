@@ -46,14 +46,6 @@ add_filter( 'block_editor_settings_all', __NAMESPACE__ . '\remove_gutenberg_inli
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\block_editor_title_input_styles' );
 
 /**
- * ACF blocks
- */
-require get_theme_file_path( 'inc/hooks/acf-blocks.php' );
-add_filter( 'block_categories_all', __NAMESPACE__ . '\acf_blocks_add_category_in_gutenberg', 10, 2 );
-add_action( 'acf/init', __NAMESPACE__ . '\acf_blocks_init' );
-add_filter( 'acf/fields/wysiwyg/toolbars', __NAMESPACE__ . '\add_custom_tinymce_toolbars' );
-
-/**
  * Form related hooks
  */
 require get_theme_file_path( 'inc/hooks/forms.php' );

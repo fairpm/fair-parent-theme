@@ -9,9 +9,9 @@ namespace Fair_Parent;
 
 ?>
 
-<nav id="nav" class="nav-primary nav-menu" aria-label="<?php echo esc_html( get_default_localization( 'Main navigation' ) ); ?>">
+<nav id="nav" class="nav-primary nav-menu" aria-label="<?php esc_html_e( 'Main navigation', 'fair-parent-theme' ); ?>">
 
-  <button aria-haspopup="true" aria-expanded="false" aria-controls="nav" id="nav-toggle" class="nav-toggle" type="button" aria-label="<?php echo esc_html( get_default_localization( 'Open main menu' ) ); ?>">
+  <button aria-haspopup="true" aria-expanded="false" aria-controls="nav" id="nav-toggle" class="nav-toggle" type="button" aria-label="<?php esc_html_e( 'Open main menu', 'fair-parent-theme' ); ?>">
     <span class="hamburger" aria-hidden="true"></span>
   </button>
 
