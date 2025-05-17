@@ -158,7 +158,7 @@ function maybe_show_error_block( $message, $title = false ) {
   }
 
   if ( false === $title ) {
-    $title = get_default_localization( 'Block missing required data' );
+    $title = __( 'Block missing required data', 'fair-parent-theme' );
   }
   ?>
   <div class="block block-error">
@@ -171,7 +171,7 @@ function maybe_show_error_block( $message, $title = false ) {
         <p class="error-message"><?php echo wp_kses_post( $message ) ?></p>
       <?php endif; ?>
 
-      <p class="info"><?php echo esc_html( get_default_localization( 'This error is shown only for logged in users' ) ); ?></p>
+      <p class="info"><?php esc_html_e( 'This error is shown only for logged in users', 'fair-parent-theme' ); ?></p>
     </div>
   </div>
   <?php

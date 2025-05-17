@@ -24,21 +24,7 @@ function allowed_block_types( $allowed_blocks, $editor_context ) { // phpcs:igno
 
   $allowed_blocks = [];
   $select_all = 'all' === THEME_SETTINGS['allowed_blocks'][ get_post_type() ] || ( is_array( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) && in_array( 'all', THEME_SETTINGS['allowed_blocks'][ get_post_type() ], true ) );
-  $acf_blocks = 'all-acf-blocks' === THEME_SETTINGS['allowed_blocks'][ get_post_type() ] || ( is_array( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) && in_array( 'all-acf-blocks', THEME_SETTINGS['allowed_blocks'][ get_post_type() ], true ) );
   $core_blocks = 'all-core-blocks' === THEME_SETTINGS['allowed_blocks'][ get_post_type() ] || ( is_array( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) && in_array( 'all-core-blocks', THEME_SETTINGS['allowed_blocks'][ get_post_type() ], true ) );
-
-  // If post type block has been set to 'all-acf-blocks', return all ACF blocks, or if the array below it contains 'all-acf-blocks', return all ACF blocks
-  if ( $select_all || $acf_blocks ) {
-
-    // Add ACF blocks
-    if ( isset( THEME_SETTINGS['acf_blocks'] ) ) {
-      $allowed_blocks = [];
-
-      foreach ( THEME_SETTINGS['acf_blocks'] as $custom_block ) {
-        $allowed_blocks[] = 'acf/' . $custom_block['name'];
-      }
-    }
-  }
 
   // If post type block has been set to 'all-core-blocks', return all core blocks, or if the array below it contains 'all-core-blocks', return all core blocks
   if ( $select_all || $core_blocks ) {

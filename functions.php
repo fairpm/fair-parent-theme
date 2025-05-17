@@ -82,7 +82,7 @@ add_action( 'after_setup_theme', function() {
 
     // Restrict to only selected blocks
     //
-    // Options: 'none', 'all', 'all-core-blocks', 'all-acf-blocks',
+    // Options: 'none', 'all', 'all-core-blocks',
     // or any specific block or a combination of these
     // Accepts both string (all*/none-options only) and array (options + specific blocks)
     'allowed_blocks' => [
