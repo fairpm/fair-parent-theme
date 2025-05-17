@@ -43,6 +43,7 @@ function build_theme_support() {
       'search-form',
       'comment-form',
       'comment-list',
+	  'navigation-widgets',
       'gallery',
       'caption',
       'script',
