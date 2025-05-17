@@ -22,7 +22,7 @@ get_header(); ?>
 
         <h1 id="content">404 <span class="screen-reader-text"><?php echo esc_html__( 'Page not found.', 'fair-parent-theme' ); ?></span></h1>
         <h2 aria-hidden="true"><?php echo esc_html__( 'Page not found.', 'fair-parent-theme' ); ?></h2>
-        <p><?php echo esc_html__( 'The reason might be mistyped or expired URL.', 'fair-parent-theme' ); ?></p>
+        <p><?php echo esc_html__( 'The reason might be a mistyped or expired URL.', 'fair-parent-theme' ); ?></p>
 
       </div>
     </div>
