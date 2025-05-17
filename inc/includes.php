@@ -10,9 +10,6 @@ namespace Fair_Parent;
 // Theme setup
 require get_theme_file_path( '/inc/includes/theme-setup.php' );
 
-// Localized strings
-require get_theme_file_path( '/inc/includes/localization.php' );
-
 // Nav walkers
 require get_theme_file_path( '/inc/includes/nav-walker.php' );
 require get_theme_file_path( '/inc/includes/nav-walker-footer.php' );
