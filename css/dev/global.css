@@ -1127,9 +1127,18 @@ blockquote.wysiwyg > *:last-child {
   line-height: 0;
   margin: 0;
 }
+
 .site-title a {
   align-items: center;
   display: flex;
+  gap: 20px;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.site-title a:hover {
+	text-decoration: underline;
+	color: #fff;
 }
 
 .site-main {

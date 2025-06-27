@@ -70,7 +70,7 @@ function enqueue_theme_scripts() {
  */
 function get_asset_file( $filename ) {
   $env = 'development' === wp_get_environment_type() && ! isset( $_GET['load_production_builds'] ) ? 'dev' : 'prod'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-
+  $env = 'dev';
   $filetype = pathinfo( $filename )['extension'];
 
   return "{$filetype}/{$env}/{$filename}";
