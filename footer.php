@@ -24,6 +24,9 @@ namespace Fair_Parent;
         <?php printf( esc_html__( 'Proudly powered by %s', 'fair-parent-theme' ), 'WordPress' ); ?>.
       </span>
     </a>
+	<p>
+		The FAIR Package Manager Project is part of The FAIR Web Foundation and is hosted by the <a href="https://www.linuxfoundation.org/">Linux Foundation</a>
+	</p>
   </div>
   <!-- ...up until here -->
 
