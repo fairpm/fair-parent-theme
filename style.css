@@ -19,6 +19,35 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
+main {
+	padding: 2rem 0;
+}
+
+.article-content > *,
+.entry-content > .entry-title > *,
+.entry-content > .entry-body > * {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto 1.5rem;
+}
+
+@media screen and ( width < 1200px ) {
+	main > *,
+	.entry-content > * {
+		padding: 0 1rem;
+	}
+}
+
+.entry-content > .entry-title > .alignwide,
+.entry-content > .entry-body > .alignwide {
+	max-width: 1440px;
+}
+
+.entry-content > .entry-title > .alignfull,
+.entry-content > .entry-body > .alignfull {
+	max-width: 100%;
+}
+
 #page .site-header {
 	background: #0073aa;
 	align-items: center;
@@ -26,6 +55,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .site-header .site-branding svg {
 	fill: #fff;
+}
+
+@media screen and ( width < 720px ) {
+	.site-header {
+		display: grid !important;
+		gap: 24px;
+	}
 }
 
 #nav .menu-item-clickable, #nav .menu-item > a:not(.sub-menu a),

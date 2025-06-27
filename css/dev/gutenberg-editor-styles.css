@@ -255,7 +255,7 @@ a:focus,button:focus,div[tabindex]:focus,input:focus,select:focus,textarea:focus
   font-family: "Mona Sans";
   font-style: normal;
   font-weight: 1 999;
-  src: url(../../../../../content/themes/air-light/fonts/monasansvf.woff2) format("woff2"), url(../../../../../content/themes/air-light/fonts/monasansvf.woff) format("woff");
+  src: url(../../../../../wp-content/themes/fair-parent-theme/fonts/monasansvf.woff2) format("woff2"), url(../../../../../wp-content/themes/fair-parent-theme/fonts/monasansvf.woff) format("woff");
 }
 .article-content,.editor-styles-wrapper {
   max-width: 100%;

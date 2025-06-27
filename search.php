@@ -37,7 +37,7 @@ foreach ( $results as $slug => $post_type ) {
 
 get_header(); ?>
 
-<main class="site-main">
+<main class="site-main" id="content">
 
   <section class="block block-search">
     <div class="container">

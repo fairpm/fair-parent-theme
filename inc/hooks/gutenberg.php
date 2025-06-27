@@ -8,61 +8,6 @@
 namespace Fair_Parent;
 
 /**
- * Restrict blocks to only allowed blocks in the settings
- */
-function allowed_block_types( $allowed_blocks, $editor_context ) { // phpcs:ignore
-
-  // If no allowed blocks are defined or it is set to none, return an empty array
-  if ( empty( THEME_SETTINGS['allowed_blocks'] ) || 'none' === THEME_SETTINGS['allowed_blocks'] ) {
-    return [];
-  }
-
-  // If the post type contains empty array or none, return an empty array for that post type post
-  if ( empty( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) || 'none' === THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) {
-    return [];
-  }
-
-  $allowed_blocks = [];
-  $select_all = 'all' === THEME_SETTINGS['allowed_blocks'][ get_post_type() ] || ( is_array( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) && in_array( 'all', THEME_SETTINGS['allowed_blocks'][ get_post_type() ], true ) );
-  $core_blocks = 'all-core-blocks' === THEME_SETTINGS['allowed_blocks'][ get_post_type() ] || ( is_array( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) && in_array( 'all-core-blocks', THEME_SETTINGS['allowed_blocks'][ get_post_type() ], true ) );
-
-  // If post type block has been set to 'all-core-blocks', return all core blocks, or if the array below it contains 'all-core-blocks', return all core blocks
-  if ( $select_all || $core_blocks ) {
-    $registered_blocks = \WP_Block_Type_Registry::get_instance()->get_all_registered();
-
-    // Remove all but core/* blocks from array
-    $core_blocks = array_filter( $registered_blocks, function( $block ) {
-      return strpos( $block->name, 'core/' ) === 0;
-    });
-
-    // Allow filtering core blocks with full block data
-    $core_blocks = apply_filters( 'fair_parent_allowed_core_blocks_obj', $core_blocks );
-
-    $core_blocks = array_map(function( $block ) {
-      return $block->name;
-    }, $core_blocks );
-
-    // Get array values
-    $core_blocks = array_values( $core_blocks );
-
-    // Allow filtering core blocks before merging allowed blocks
-    $core_blocks = apply_filters( 'fair_parent_allowed_core_blocks', $core_blocks );
-
-    // Add blocks defined on top of core blocks
-    if ( is_array( $core_blocks ) ) {
-      $allowed_blocks = array_merge( $allowed_blocks, $core_blocks );
-    }
-  }
-
-  // Add blocks defined on top of core blocks
-  if ( is_array( THEME_SETTINGS['allowed_blocks'][ get_post_type() ] ) ) {
-    $allowed_blocks = array_merge( $allowed_blocks, THEME_SETTINGS['allowed_blocks'][ get_post_type() ] );
-  }
-
-  return $allowed_blocks;
-} // end allowed_block_types
-
-/**
  * Check whether to use classic or block editor for a certain post type as defined in the settings
  */
 function use_block_editor_for_post_type( $use_block_editor, $post_type ) {

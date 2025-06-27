@@ -2,7 +2,7 @@
 // Declare the blocks you'd like to style.
 wp.blocks.registerBlockStyle('core/paragraph', {
   name: 'boxed',
-  label: 'Laatikko',
+  label: 'Boxed',
 });
 
 // Deregister some unused embed blocks

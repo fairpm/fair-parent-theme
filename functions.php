@@ -99,22 +99,6 @@ add_action( 'after_setup_theme', function() {
 } ); // end action after_setup_theme
 
 /**
- * Debug function to print all available blocks
- */
-function debug_print_all_blocks() {
-  $blocks = \WP_Block_Type_Registry::get_instance()->get_all_registered();
-  $block_names = array_map(function( $block ) {
-    return "'" . $block->name . "',";
-  }, $blocks);
-  echo '<pre>' . implode( "\n", $block_names ) . '</pre>'; // phpcs:ignore
-  die();
-}
-
-// Uncomment the following line to see all available blocks:
-// add_action('init', __NAMESPACE__ . '\\debug_print_all_blocks');
-
-
-/**
  * Required files
  */
 require get_theme_file_path( '/inc/hooks.php' );
@@ -127,3 +111,9 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\build_theme_support' );
 
 // Add Linux Foundation Banner
 add_action( 'wp_body_open', __NAMESPACE__ . '\fair_linux_banner' );
+
+//Remove Gutenberg Block Library CSS from loading on the frontend
+function fair_remove_wp_block_library_css(){
+    wp_dequeue_style( 'wp-block-library-theme' );
+} 
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\fair_remove_wp_block_library_css', 100 );
