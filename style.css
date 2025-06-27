@@ -30,6 +30,13 @@ main > *,
 	margin: 0 auto 1.5rem;
 }
 
+@media screen and ( width < 1200px ) {
+	main > *,
+	.entry-content > * {
+		padding: 0 1rem;
+	}
+}
+
 main > .alignwide,
 .entry-content > .alignwide {
 	max-width: 1440px;
@@ -47,6 +54,13 @@ main > .alignfull,
 
 .site-header .site-branding svg {
 	fill: #fff;
+}
+
+@media screen and ( width < 720px ) {
+	.site-header {
+		display: grid !important;
+		gap: 24px;
+	}
 }
 
 #nav .menu-item-clickable, #nav .menu-item > a:not(.sub-menu a),

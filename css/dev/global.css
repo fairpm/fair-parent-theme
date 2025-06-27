@@ -680,7 +680,7 @@ body:not(.js-nav-active) .nav-toggle:hover .hamburger::after {
 }
 @media screen and (max-width: 782px) {
   .logged-in.admin-bar .menu-items-wrapper {
-    margin-top: 46px;
+    margin-top: 76px;
   }
 }
 :root {
@@ -1072,11 +1072,6 @@ em,i {
   font-style: italic;
 }
 
-p {
-  margin-bottom: 2.9rem;
-  margin-top: 2.9rem;
-}
-
 p:last-child {
   margin-bottom: 0;
 }
@@ -1157,6 +1152,9 @@ blockquote.wysiwyg > *:last-child {
   padding: 3.75rem 1.25rem;
   text-align: center;
 }
+.site-footer p {
+	color: white;
+}
 .site-footer a {
 	color: var(--color-white);
 }
@@ -1182,27 +1180,23 @@ blockquote.wysiwyg > *:last-child {
 .site-footer .powered-by-wordpress {
   display: inline-block;
   font-weight: var(--typography-weight-semibold);
-  margin-bottom: 0.625rem;
   text-align: center;
 }
-.site-footer .github-link {
-  margin-left: 0.5rem;
-  margin-top: 4px;
-  padding-bottom: 4px;
-  position: relative;
-}
-.site-footer .theme-info {
-  align-items: center;
-  color: var(--color-paragraph);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  line-height: 1.5;
-  margin: 0 auto;
-  text-align: center;
+.site-info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 2rem;
+	flex-wrap: wrap;
 }
 .site-footer .theme-info i {
   margin: 0 0.3125rem;
+}
+
+@media screen and ( width < 720px ) {
+	.site-info {
+		justify-content: center;
+	}
 }
 
 .site-footer .wrapper-button,.site-main .wrapper-button {
