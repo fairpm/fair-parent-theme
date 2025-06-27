@@ -124,3 +124,6 @@ require get_theme_file_path( '/inc/template-tags.php' );
 // Run theme setup
 add_action( 'after_setup_theme', __NAMESPACE__ . '\theme_setup' );
 add_action( 'after_setup_theme', __NAMESPACE__ . '\build_theme_support' );
+
+// Add Linux Foundation Banner
+add_action( 'wp_body_open', __NAMESPACE__ . '\fair_linux_banner' );
