@@ -23,8 +23,9 @@ main {
 	padding: 2rem 0;
 }
 
-main > *,
-.entry-content > * {
+.article-content > *,
+.entry-content > .entry-title > *,
+.entry-content > .entry-body > * {
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto 1.5rem;
@@ -37,13 +38,13 @@ main > *,
 	}
 }
 
-main > .alignwide,
-.entry-content > .alignwide {
+.entry-content > .entry-title > .alignwide,
+.entry-content > .entry-body > .alignwide {
 	max-width: 1440px;
 }
 
-main > .alignfull,
-.entry-content > .alignfull {
+.entry-content > .entry-title > .alignfull,
+.entry-content > .entry-body > .alignfull {
 	max-width: 100%;
 }
 

@@ -22,10 +22,17 @@ the_post();
 get_header(); ?>
 
 <main class="site-main">
-  <?php
-    the_content();
-    air_edit_link();
-  ?>
+	<article class="entry-content">
+		<header class="entry-title">
+			<?php the_title( '<h1 class="entry-header">', '</h1>' ); ?>
+		</header>
+		<div class="entry-body">
+		<?php
+			the_content();
+			air_edit_link();
+		?>
+		</div>
+	</article>
 </main>
 
 <?php get_footer();
