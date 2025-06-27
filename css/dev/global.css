@@ -1126,6 +1126,7 @@ blockquote.wysiwyg > *:last-child {
 .site-title {
   line-height: 0;
   margin: 0;
+  font-weight: 400;
 }
 
 .site-title a {
@@ -1150,19 +1151,25 @@ blockquote.wysiwyg > *:last-child {
 }
 
 .site-footer {
-  display: none;
-  background-color: var(--color-white);
+  background-color: #0073aa;
   clear: both;
-  color: var(--color-paragraph);
-  overflow: hidden;
+  color: white;
   padding: 3.75rem 1.25rem;
   text-align: center;
+}
+.site-footer a {
+	color: var(--color-white);
+}
+.site-footer a:hover {
+	color: var(--color-white);
+	text-decoration: underline;
 }
 .site-footer .wordpress-logo {
   display: block;
   margin-bottom: 1.25rem;
   margin-left: auto;
   margin-right: auto;
+  fill: white;
 }
 .site-footer span {
   display: block;
@@ -1181,7 +1188,6 @@ blockquote.wysiwyg > *:last-child {
 .site-footer .github-link {
   margin-left: 0.5rem;
   margin-top: 4px;
-  overflow: hidden;
   padding-bottom: 4px;
   position: relative;
 }
