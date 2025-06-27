@@ -14,7 +14,7 @@ namespace Fair_Parent;
 
 get_header(); ?>
 
-<main class="site-main">
+<main class="site-main" id="content">
 
   <section class="block block-error-404">
     <div class="container">

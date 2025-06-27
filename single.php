@@ -15,7 +15,7 @@ namespace Fair_Parent;
 the_post();
 get_header(); ?>
 
-<main class="site-main">
+<main class="site-main" id="content">
 
   <section class="block block-single">
     <article class="article-content">
