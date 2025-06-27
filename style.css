@@ -57,3 +57,28 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	border: none;
 	box-shadow: 0 2px 3px #666;
 }
+
+#lf-header {
+	background: #232323;
+	width: 100%;
+	line-height: 1.5;
+}
+
+.admin-bar #lf-header {
+	top: 32px;
+}
+
+#lf-header .container {
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	padding: 8px var(--spacing-container-padding-inline) 6px;
+}
+
+#lf-header img {
+	height: 20px;
+	width: auto;
+	display: block;
+	max-width: 90%;
+	margin: 0 auto;
+}
