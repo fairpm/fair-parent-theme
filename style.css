@@ -19,6 +19,27 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
+main {
+	padding: 2rem 0;
+}
+
+main > *,
+.entry-content > * {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto 1.5rem;
+}
+
+main > .alignwide,
+.entry-content > .alignwide {
+	max-width: 1440px;
+}
+
+main > .alignfull,
+.entry-content > .alignfull {
+	max-width: 100%;
+}
+
 #page .site-header {
 	background: #0073aa;
 	align-items: center;
