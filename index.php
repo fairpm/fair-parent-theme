@@ -19,7 +19,7 @@ namespace Fair_Parent;
 
 get_header(); ?>
 
-<main class="site-main">
+<main class="site-main" id="content">
 
   <section class="block block-blog">
     <div class="container">
