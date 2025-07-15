@@ -1189,6 +1189,9 @@ blockquote.wysiwyg > *:last-child {
 	margin: 0 2rem;
 	flex-wrap: wrap;
 }
+.site-info p {
+	margin: 0;
+}
 .site-footer .theme-info i {
   margin: 0 0.3125rem;
 }
