@@ -2086,12 +2086,9 @@ body *[aria-invalid=true] {
   font-weight: var(--typography-weight-semibold);
   line-height: 1.39;
   margin-bottom: 0;
-  max-width: 230px;
-  overflow: hidden;
   padding: calc(14px - var(--border-width-input-field)*2) calc(21px - var(--border-width-input-field)*2);
   position: relative;
   text-decoration: none;
-  text-overflow: ellipsis;
   transition: all 150ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   white-space: nowrap;
   width: auto;
@@ -2443,7 +2440,6 @@ body *[aria-invalid=true] {
   background-color: var(--color-scorpion);
   color: var(--color-white);
   font-weight: var(--typography-weight-bold);
-  overflow: hidden;
   text-align: left;
 }
 .article-content td,.editor-styles-wrapper td {
