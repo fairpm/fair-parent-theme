@@ -1,6 +1,6 @@
 /* eslint-disable max-len, no-param-reassign, no-unused-vars */
 /**
- * Air theme JavaScript.
+ * FAIR Parent theme JavaScript.
  */
 
 // Import modules
