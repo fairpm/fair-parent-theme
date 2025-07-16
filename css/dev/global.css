@@ -1159,6 +1159,9 @@ blockquote.wysiwyg > *:last-child {
 	color: var(--color-white);
 	text-decoration: underline;
 }
+.site-footer p > a:hover {
+	text-decoration: none;
+}
 .site-footer .wordpress-logo {
   display: block;
   margin-bottom: 1.25rem;
@@ -2654,8 +2657,12 @@ a:focus,a:hover {
   text-decoration-color: var(--color-link-text-hover);
 }
 
-.entry-footer a,.site-footer a,.site-header a {
+.entry-footer a:not( p > a ),.site-footer a:not( p > a ),.site-header a:not( p > a ) {
   text-decoration: none;
+}
+
+.site-footer a {
+  text-decoration-color: #fff;
 }
 
 p {
