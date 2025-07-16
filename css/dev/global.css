@@ -214,7 +214,7 @@ img {
 :root {
   --color-black: #000;
   --color-blue-chalk: #ece6f2;
-  --color-east-bay: #545773;
+  --color-east-bay: #343753;
   --color-pattens-blue: #eaf1f8;
   --color-science-blue: #0049d1;
   --color-scorpion: #5f5f5f;
@@ -226,32 +226,30 @@ img {
   --color-link-text: var(--color-science-blue);
   --color-link-text-hover: var(--color-black);
   --color-error: #cc2e2e;
-  --color-success: #21aa14;
+  --color-success: #219a14;
   --width-max-mobile: 1029px;
   --typography-family-main: "Mona Sans", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
   --typography-family-paragraph: var(--typography-family-main);
   --typography-family-heading: var(--typography-family-main);
-  --typography-size-hero: 52px;
-  --typography-h1-size: 40px;
-  --typography-h2-size: 30px;
-  --typography-h3-size: 24px;
-  --typography-h4-size: 20px;
-  --typography-h5-size: 16px;
-  --typography-h6-size: 14px;
-  --typography-size-12: 12px;
-  --typography-size-13: 13px;
-  --typography-size-14: 14px;
-  --typography-size-15: 15px;
-  --typography-size-16: 16px;
-  --typography-size-17: 17px;
-  --typography-size-18: 18px;
-  --typography-size-20: 20px;
-  --typography-size-22: 22px;
+  --typography-size-hero: 3.25rem;
+  --typography-h1-size: 2.5rem;
+  --typography-h2-size: 1.875rem;
+  --typography-h3-size: 1.5rem;
+  --typography-h4-size: 1.25rem;
+  --typography-h5-size: 1rem;
+  --typography-h6-size: .875rem;
+  --typography-size-14: .875rem;
+  --typography-size-15: .937rem;
+  --typography-size-16: 1rem;
+  --typography-size-17: 1.0625rem;
+  --typography-size-18: 1.125rem;
+  --typography-size-20: 1.25rem;
+  --typography-size-22: 1.375rem;
   --typography-paragraph-size: var(--typography-size-18);
-  --typography-nav-toggle-label-size: 15px;
-  --typography-captions-size: 15px;
+  --typography-nav-toggle-label-size: var(--typography-size-16);
+  --typography-captions-size: var(--typography-size-16);
   --typography-heading-line-height: 1.5;
-  --typography-heading-core-line-height: 1.23;
+  --typography-heading-core-line-height: 1.5;
   --typography-paragraph-line-height: 1.7;
   --typography-weight-regular: 400;
   --typography-weight-medium: 500;
@@ -270,20 +268,19 @@ img {
 }
 @media (max-width: 600px) {
   :root {
-    --typography-size-hero: 38px;
-    --typography-h1-size: 32px;
-    --typography-h2-size: 24px;
-    --typography-h3-size: 21px;
-    --typography-h4-size: 18px;
-    --typography-h5-size: 14px;
-    --typography-h6-size: 12px;
-    --typography-paragraph-size: 16px;
+    --typography-size-hero: 2.5rem;
+    --typography-h1-size: 2rem;
+    --typography-h2-size: 1.5rem;
+    --typography-h3-size: 1.33rem;
+    --typography-h4-size: 1.25rem;
+    --typography-h5-size: 1rem;
+    --typography-h6-size: .875rem;
+    --typography-paragraph-size: 1rem;
   }
 }
 @media (max-width: 420px) {
   :root {
-    --typography-size-16: 14px;
-    --typography-nav-toggle-label-size: 13px;
+    --typography-size-16: .875rem;
   }
 }
 
@@ -312,7 +309,7 @@ img {
   --border-radius-select: 3px;
   --border-width-checkbox: 1px;
   --border-width-input-field: 1px;
-  --typography-size-input-fields: var(--typography-size-17);
+  --typography-size-input-fields: var(--typography-size-18);
   --typography-size-input-labels: var(--typography-size-input-fields);
   --typography-size-required-text-label: var(--typography-size-input-fields);
   --typography-size-required-asterisk-label: 0.8593rem;
@@ -1191,6 +1188,8 @@ blockquote.wysiwyg > *:last-child {
 }
 .site-info p {
 	margin: 0;
+	font-size: var(--typography-size-16);
+	font-style: italic;
 }
 .site-footer .theme-info i {
   margin: 0 0.3125rem;
@@ -1831,7 +1830,7 @@ body *[aria-invalid=true] {
   box-shadow: none;
   color: var(--color-black);
   display: inline-block;
-  font-size: var(--typography-size-12);
+  font-size: var(--typography-size-14);
   margin-right: 4px;
   padding: 0.0625rem 0.5rem;
   transition: all 150ms;
