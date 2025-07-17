@@ -69,8 +69,7 @@ function enqueue_theme_scripts() {
  * @return string file and path of the asset file
  */
 function get_asset_file( $filename ) {
-  $env = 'development' === wp_get_environment_type() && ! isset( $_GET['load_production_builds'] ) ? 'dev' : 'prod'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-  $env = 'dev';
+  $env      = 'dev'; // At a later point, can reintroduce production builds.
   $filetype = pathinfo( $filename )['extension'];
 
   return "{$filetype}/{$env}/{$filename}";

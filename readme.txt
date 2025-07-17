@@ -15,6 +15,7 @@ Fair network parent theme..
 
 == Description ==
 
+This theme is based on Air Light, by Digitoimisto Dude Oy. It has been significantly simplified to remove build tooling, with the intent that it will be rebuilt in the future.
 
 == Installation ==
 

@@ -25,7 +25,7 @@ namespace Fair_Parent;
       </span>
     </a>
 	<p>
-		The FAIR Package Manager Project is part of The FAIR Web Foundation and is hosted by the <a href="https://www.linuxfoundation.org/">Linux Foundation</a>
+		The FAIR Package Manager Project is part of The FAIR Web Foundation, and is hosted by the <a href="https://www.linuxfoundation.org/">Linux Foundation</a>
 	</p>
   </div>
   <!-- ...up until here -->
