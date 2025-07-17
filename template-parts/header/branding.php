@@ -13,7 +13,7 @@ $description = get_bloginfo( 'description', 'display' );
 <div class="site-branding">
 <?php
 	$el = ( is_front_page() ) ? 'h1' : 'p';
-	$is_current = ( is_front_page() ) ? ' aria-current="true"' : '';
+	$is_current = ( is_front_page() ) ? ' aria-current="page"' : '';
 ?>
   <<?php echo $el; ?> class="site-title">
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"<?php echo $is_current; ?>>
