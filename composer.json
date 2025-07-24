@@ -1,6 +1,6 @@
 {
 	"name": "fairpm/fair-parent-theme",
-	"type": "package",
+	"type": "wordpress-theme",
 	"description": "FAIR Package Manager network theme.",
 	"keywords": [
 		"fairpm",
