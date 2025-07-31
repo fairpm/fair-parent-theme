@@ -2649,7 +2649,7 @@ a {
   color: var(--color-link-text);
   text-decoration: underline;
   text-decoration-color: var(--color-link-text);
-  text-underline-offset: 0.375rem;
+  text-underline-offset: 0.275rem;
   transition: all 150ms;
 }
 a:focus,a:hover {

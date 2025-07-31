@@ -122,3 +122,8 @@ main {
 .has-background {
 	padding: 1rem;
 }
+
+.wp-block-button:focus {
+	outline: 2px solid var(--color-link-text);
+	outline-offset: -6px;
+}
