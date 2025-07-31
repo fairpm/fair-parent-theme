@@ -2651,6 +2651,7 @@ a {
   text-decoration-color: var(--color-link-text);
   text-underline-offset: 0.275rem;
   transition: all 150ms;
+  text-decoration-thickness: 4px;
 }
 a:focus,a:hover {
   color: var(--color-link-text-hover);
