@@ -15,6 +15,8 @@ function entry_footer() {
 
   if ( 'post' === get_post_type() ) :
     if ( has_category() ) : ?>
+	<div class="tax-container category-container">
+	  <h2 class="tax-header category-header"><?php esc_html_e( 'Categories', 'fair-parent-theme' ); ?></h2>
       <ul class="categories">
         <?php $categories = wp_get_post_categories( get_the_id(), [ 'fields' => 'all' ] );
           if ( ! empty( $categories ) ) {
@@ -23,11 +25,19 @@ function entry_footer() {
             }
         } ?>
       </ul>
+	</div>
     <?php	endif;
 
     $tags_list = get_the_tag_list( '', esc_attr_x( ', ', 'list item separator', 'fair-parent-theme' ) );
     if ( $tags_list ) {
+	  ?>
+	  <div class="tax-container tags-container">
+		<h2 class="tax-header tags-header"><?php esc_html_e( 'Tags', 'fair-parent-theme' ); ?></h2>
+	  <?php
       the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' );
+	  ?>
+	  </div>
+	  <?php
     }
   endif;
 

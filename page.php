@@ -23,7 +23,8 @@ get_header(); ?>
 
 <main class="site-main" id="content">
 	<article class="entry-content">
-		<header class="entry-title">
+		<?php $class = ( is_front_page() ) ? 'screen-reader-text ' : ''; ?>
+		<header class="<?php echo esc_attr( $class ); ?>entry-title">
 			<?php the_title( '<h1 class="entry-header">', '</h1>' ); ?>
 		</header>
 		<div class="entry-body">
