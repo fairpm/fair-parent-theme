@@ -335,11 +335,7 @@ img {
   --spacing-wp-block-image-margin-block: 2.5rem;
   --spacing-paragraphs-margin-block: 1.6875rem;
 }
-@media (max-width: 1590px) {
-  :root {
-    --spacing-container-padding-inline: 4rem;
-  }
-}
+
 @media (max-width: 700px) {
   :root {
     --spacing-container-padding-inline: 1.25rem;
@@ -1418,11 +1414,9 @@ input[type=checkbox] + label:focus,input[type=checkbox] + label:hover,input[type
   width: 1.875rem;
   z-index: 1;
 }
-.top:hover {
-  background-color: var(--color-background-top-hover);
-}
-.top:focus {
-  background-color: var(--color-background-top);
+.top:hover, .top:focus {
+	color: var(--color-background-top-hover);
+	background-color: var(--color-black);
 }
 
 .top.is-visible {
@@ -2648,6 +2642,13 @@ a:focus,a:hover {
 
 .site-footer a {
   text-decoration-color: #fff;
+}
+
+.site-title a:hover,
+.site-title a:focus,
+.site-footer a:hover,
+.site-footer a:focus {
+	color: #fff;
 }
 
 p {
