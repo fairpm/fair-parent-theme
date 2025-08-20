@@ -713,7 +713,7 @@ body:not(.js-nav-active) .nav-toggle:hover .hamburger::after {
     display: none;
   }
   .nav-primary {
-    line-height: 0;
+    line-height: 1;
     padding-bottom: 0;
     padding-top: 0;
   }
