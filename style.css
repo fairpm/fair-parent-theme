@@ -96,7 +96,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-color: var(--color-transparent-gray);
 }
 
-main {
+main:not(.home main) {
 	padding: 2rem 0;
 }
 
