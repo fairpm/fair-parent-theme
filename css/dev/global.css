@@ -1745,7 +1745,19 @@ body *[aria-invalid=true] {
   padding: 1.25rem;
 }
 
-.block-search,.block-search-results {
+main:has(.block-search) {
+	padding-top: 0;
+}
+
+.block-search {
+	width: 100%;
+	background: var(--color-light-blue);
+}
+.block-search h1 {
+	margin-bottom: 0;
+}
+
+.block-search-results {
   background-color: var(--color-white);
 }
 
