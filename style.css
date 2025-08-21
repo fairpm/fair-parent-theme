@@ -19,6 +19,83 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
+:root {
+	--color-green: #25b372;
+	--color-orange: #ff8800;
+	--color-blue: #0073aa;
+	--color-dark-blue: #003d5c;
+	--color-light-blue: #66b3d6;
+	--color-black: #000;
+	--color-white: #fff;
+	--color-light-gray: #f6f6f7;
+	--color-dark-gray: #565757;
+	--color-transparent-gray: #e6e6e7dd;
+}
+
+.has-green-color {
+	color: var(--color-green);
+}
+.has-orange-color {
+	color: var(--color-orange);
+}
+.has-blue-color {
+	color: var(--color-blue);
+}
+.has-dark-blue-color {
+	color: var(--color-dark-blue);
+}
+.has-light-blue-color {
+	color: var(--color-light-blue);
+}
+.has-gray-color {
+	color: var(--color-gray);
+}
+.has-dark-gray-color {
+	color: var(--color-dark-gray);
+}
+.has-light-gray-color {
+	color: var(--color-light-gray);
+}
+.has-transparent-gray-color {
+	color: white;
+}
+
+.has-green-background-color {
+	background-color: var(--color-green);
+	color: #000 !important;
+}
+.has-orange-background-color {
+	background-color: var(--color-orange);
+	color: #000 !important;
+}
+.has-blue-background-color {
+	background-color: var(--color-blue);
+	color: #fff !important;
+}
+.has-dark-background-blue-color {
+	background-color: var(--color-dark-blue);
+	color: #fff !important;
+}
+.has-light-blue-background-color {
+	background-color: var(--color-light-blue);
+	color: #000 !important;
+}
+.has-gray-background-color {
+	background-color: var(--color-gray);
+	color: #111 !important;
+}
+.has-dark-gray-background-color {
+	background-color: var(--color-dark-gray);
+	color: #fff !important;
+}
+.has-light-gray-background-color {
+	background-color: var(--color-light-gray);
+	color: #333 !important;
+}
+.has-transparent-gray-background-color {
+	background-color: var(--color-transparent-gray);
+}
+
 main {
 	padding: 2rem 0;
 }

@@ -50,4 +50,62 @@ function build_theme_support() {
       'style',
     ]
   );
+	// Disable Custom Colors
+	add_theme_support( 'disable-custom-colors' );
+	// Editor Color Palette
+	add_theme_support(
+		'editor-color-palette',
+		array(
+			array(
+				'name'  => __( 'Orange', 'fair-parent-theme' ),
+				'slug'  => 'orange',
+				'color' => '#ff8800',
+			),
+			array(
+				'name'  => __( 'Green', 'fair-parent-theme' ),
+				'slug'  => 'green',
+				'color' => '#25b372',
+			),
+			array(
+				'name'  => __( 'Blue', 'fair-parent-theme' ),
+				'slug'  => 'blue',
+				'color' => '#0073aa',
+			),
+			array(
+				'name'  => __( 'Dark Blue', 'fair-parent-theme' ),
+				'slug'  => 'dark-blue',
+				'color' => '#003d5c',
+			),
+			array(
+				'name'  => __( 'Light Blue', 'fair-parent-theme' ),
+				'slug'  => 'light-blue',
+				'color'	=> '#66b3d6',
+			),
+			array(
+				'name'  => __( 'Black', 'fair-parent-theme' ),
+				'slug'  => 'black',
+				'color' => '#000000',
+			),
+			array(
+				'name'	=> __( 'White', 'fair-parent-theme' ),
+				'slug'	=> 'white',
+				'color'	=> '#FFFFFF',
+			),
+			array(
+				'name'	=> __( 'Light Gray', 'fair-parent-theme' ),
+				'slug'	=> 'light-gray',
+				'color'	=> '#f6f7f7',
+			),
+			array(
+				'name'	=> __( 'Dark Gray', 'fair-parent-theme' ),
+				'slug'	=> 'dark-gray',
+				'color'	=> '#565757',
+			),
+			array(
+				'name'	=> __( 'Transparent gray', 'fair-parent-theme' ),
+				'slug'	=> 'transparent-gray',
+				'color'	=> '#e6e6e7dd',
+			),
+		)
+	);
 }
