@@ -1745,14 +1745,16 @@ body *[aria-invalid=true] {
   padding: 1.25rem;
 }
 
-main:has(.block-search) {
+main:has(.block-search,.block-home) {
 	padding-top: 0;
 }
 
+.block-home,
 .block-search {
 	width: 100%;
 	background: var(--color-light-blue);
 }
+.block-home h1,
 .block-search h1 {
 	margin-bottom: 0;
 }

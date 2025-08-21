@@ -20,15 +20,17 @@ namespace Fair_Parent;
 get_header(); ?>
 
 <main class="site-main" id="content">
-
+	<?php if ( is_home() && ! is_front_page() ) : ?>
+		<section class="block block-home">
+			<div class="container">
+				<h1 id="content"><?php single_post_title(); ?></h1>
+			</div>
+	</section>
+	<?php endif; ?>
   <section class="block block-blog">
     <div class="container">
 
       <?php if ( have_posts() ) : ?>
-
-        <?php if ( is_home() && ! is_front_page() ) : ?>
-          <h1 id="content" class="screen-reader-text"><?php single_post_title(); ?></h1>
-        <?php endif; ?>
 
         <?php while ( have_posts() ) :
           the_post(); ?>
