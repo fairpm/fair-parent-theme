@@ -57,6 +57,7 @@ add_action( 'after_setup_theme', function() {
      */
     'menu_locations' => [
       'primary' => __( 'Primary Menu', 'fair-parent-theme' ),
+	  'footer'  => __( 'Footer Menu', 'fair-parent-theme' ),
     ],
 
     // Restrict to only selected blocks
@@ -115,5 +116,5 @@ add_action( 'wp_body_open', __NAMESPACE__ . '\fair_linux_banner' );
 //Remove Gutenberg Block Library CSS from loading on the frontend
 function fair_remove_wp_block_library_css(){
     wp_dequeue_style( 'wp-block-library-theme' );
-} 
+}
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\fair_remove_wp_block_library_css', 100 );

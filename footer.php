@@ -25,11 +25,24 @@ namespace Fair_Parent;
       </span>
     </a>
 	<p>
-		The FAIR Package Manager Project is part of The FAIR Web Foundation, and is hosted by the <a href="https://www.linuxfoundation.org/">Linux Foundation</a>
+		Copyright © FAIR Package Manager a Series of LF Projects, LLC. Hosted by the <a href="https://www.linuxfoundation.org/">Linux Foundation</a>
 	</p>
   </div>
   <!-- ...up until here -->
 
+	<nav id="nav" class="nav-footer nav-menu" aria-label="<?php esc_html_e( 'Footer', 'fair-parent-theme' ); ?>">
+		<div id="menu-items-wrapper" class="menu-items-wrapper">
+			<?php wp_nav_menu( array(
+			'theme_location' => 'footer',
+			'container'      => false,
+			'depth'          => 1,
+			'menu_class'     => 'menu-items',
+			'menu_id'        => 'footer-menu',
+			'echo'           => true,
+			'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+			) ); ?>
+		</div>
+	</nav>
 </footer><!-- #colophon -->
 
 </div><!-- #page -->
