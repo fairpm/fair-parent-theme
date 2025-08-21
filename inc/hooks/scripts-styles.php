@@ -47,8 +47,8 @@ function enqueue_theme_scripts() {
   wp_localize_script( 'scripts', 'fair_parent_screenReaderText', [
     'expand_for'      => __( 'Open child menu for', 'fair-parent-theme' ),
     'collapse_for'    => __( 'Close child menu for', 'fair-parent-theme' ),
-    'expand_toggle'   => __( 'Open main menu', 'fair-parent-theme' ),
-    'collapse_toggle' => __( 'Close main menu', 'fair-parent-theme' ),
+    'expand_toggle'   => __( 'Menu', 'fair-parent-theme' ),
+    'collapse_toggle' => __( 'Menu', 'fair-parent-theme' ),
     'external_link'   => __( 'External site', 'fair-parent-theme' ),
     'target_blank'    => __( 'opens in a new window', 'fair-parent-theme' ),
     'previous_slide'  => __( 'Previous slide', 'fair-parent-theme' ),
