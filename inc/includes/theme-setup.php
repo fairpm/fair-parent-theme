@@ -59,7 +59,7 @@ function build_theme_support() {
 			array(
 				'name'  => __( 'Orange', 'fair-parent-theme' ),
 				'slug'  => 'orange',
-				'color' => '#ff8800',
+				'color' => '#ffaa00',
 			),
 			array(
 				'name'  => __( 'Green', 'fair-parent-theme' ),
@@ -102,9 +102,9 @@ function build_theme_support() {
 				'color'	=> '#565757',
 			),
 			array(
-				'name'	=> __( 'Transparent gray', 'fair-parent-theme' ),
+				'name'	=> __( 'Transparent Gray', 'fair-parent-theme' ),
 				'slug'	=> 'transparent-gray',
-				'color'	=> '#e6e6e7dd',
+				'color'	=> '#e6e6e766',
 			),
 		)
 	);
