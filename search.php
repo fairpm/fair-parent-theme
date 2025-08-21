@@ -58,25 +58,21 @@ get_header(); ?>
               <?php echo esc_html( $post_type['object']->labels->name ); ?>&nbsp;
               (<?php echo esc_html( $post_type['count'] ); ?>)
             </h2>
-
+			<ol>
             <?php foreach ( $post_type['posts'] as $post ) : ?>
-              <div class="row row-result row-result-<?php echo esc_attr( $slug ) ?>">
-
-                <div class="content">
-                  <h3>
+              <li class="row row-result row-result-<?php echo esc_attr( $slug ) ?>">
+                <p class="title">
                     <a href="<?php echo esc_url( $post['permalink'] ) ?>">
                       <?php echo esc_html( $post['title'] ) ?>
                     </a>
-                  </h3>
-
-                  <p><?php echo wp_kses_post( $post['excerpt'] ) ?></p>
-
+				</p>
+                <div class="content">
+                	<p><?php echo wp_kses_post( $post['excerpt'] ) ?></p>
                 </div>
-
-              </div>
+			</li>
 
             <?php endforeach; ?>
-          </div>
+			</ol>
         <?php endforeach; ?>
 
       </div>
