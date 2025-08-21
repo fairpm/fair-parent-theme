@@ -11,9 +11,10 @@
 namespace Fair_Parent;
 
 function entry_footer() {
-  echo '<div class="entry-footer">';
+  echo '<footer class="entry-footer">';
 
   if ( 'post' === get_post_type() ) :
+	echo '<div class="entry-taxonomies">';
     if ( has_category() ) : ?>
 	<div class="tax-container category-container">
 	  <h2 class="tax-header category-header"><?php esc_html_e( 'Categories', 'fair-parent-theme' ); ?></h2>
@@ -39,6 +40,7 @@ function entry_footer() {
 	  </div>
 	  <?php
     }
+	echo '</div>';
   endif;
 
   if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
@@ -48,5 +50,5 @@ function entry_footer() {
     echo '</span>';
   }
 
-  echo '</div>';
+  echo '</footer>';
 }
