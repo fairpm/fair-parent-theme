@@ -713,6 +713,7 @@ body:not(.js-nav-active) .nav-toggle:hover .hamburger::after {
     padding-bottom: 0;
     padding-top: 0;
   }
+  footer .menu-items ul,
   .menu-items {
     align-items: center;
     background-color: #0000;
@@ -1153,6 +1154,7 @@ blockquote.wysiwyg > *:last-child {
 }
 .site-footer p {
 	color: white;
+	text-align: end;
 }
 .site-footer a {
 	color: var(--color-white);
@@ -1184,12 +1186,16 @@ blockquote.wysiwyg > *:last-child {
   font-weight: var(--typography-weight-semibold);
   text-align: center;
 }
+footer nav,
 .site-info {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	margin: 0 2rem;
 	flex-wrap: wrap;
+}
+footer nav {
+	margin-top: 2rem;
 }
 .site-info p {
 	margin: 0;

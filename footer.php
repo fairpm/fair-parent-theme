@@ -25,7 +25,7 @@ namespace Fair_Parent;
       </span>
     </a>
 	<p>
-		Copyright © FAIR Package Manager a Series of LF Projects, LLC. Hosted by the <a href="https://www.linuxfoundation.org/">Linux Foundation</a>
+		Copyright © FAIR Package Manager a Series of LF Projects, LLC. <br>Hosted by the <a href="https://www.linuxfoundation.org/">Linux Foundation</a>
 	</p>
   </div>
   <!-- ...up until here -->
