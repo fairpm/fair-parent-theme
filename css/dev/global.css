@@ -2680,6 +2680,7 @@ a {
 a:focus,a:hover {
   color: var(--color-link-text-hover);
   text-decoration-color: var(--color-link-text-hover);
+  text-decoration-thickness: 8px;
 }
 
 .entry-footer {

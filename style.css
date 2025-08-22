@@ -96,8 +96,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-color: var(--color-transparent-gray);
 }
 
+.wp-block-button__link:hover,
+.has-dark-blue-background-color a:hover,
+.has-dark-gray-background-color a:hover,
+.has-blue-background-color a:hover {
+	color: #fff;
+	outline: 2px solid #000;
+	outline-offset: 4px;
+}
+
 main:not(.home main) {
 	padding: 2rem 0;
+}
+
+.home .wp-block-column .wp-block-button__link {
+	font-size: 1rem;
+	border-radius: 4px;
+	min-width: 240px;
+}
+
+.home .wp-block-column .wp-block-button__link strong {
+	font-size: 1.125rem;
 }
 
 .article-content > *,
@@ -212,7 +231,6 @@ main:not(.home main) {
 	padding: 1rem;
 }
 
-.wp-block-button:focus {
-	outline: 2px solid var(--color-link-text);
-	outline-offset: -6px;
+.wp-block-button__link {
+	font-size: 1.125rem;
 }
