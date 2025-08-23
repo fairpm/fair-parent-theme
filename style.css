@@ -244,3 +244,7 @@ main:not(.home main) {
 .wp-block-button__link {
 	font-size: 1.125rem;
 }
+
+code {
+	color: #059332;
+}
