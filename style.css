@@ -22,6 +22,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 :root {
 	--color-green: #25b372;
 	--color-orange: #ffaa00;
+	--color-red: #970101;
 	--color-blue: #0073aa;
 	--color-dark-blue: #003d5c;
 	--color-light-blue: #66b3d6;
@@ -37,6 +38,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 .has-orange-color {
 	color: var(--color-orange);
+}
+.has-red-color {
+	color: var(--color-red);
 }
 .has-blue-color {
 	color: var(--color-blue);
@@ -68,6 +72,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-color: var(--color-orange);
 	color: #000 !important;
 }
+.has-red-background-color {
+	background-color: var(--color-red);
+	color: #fff !important;
+}
 .has-blue-background-color {
 	background-color: var(--color-blue);
 	color: #fff !important;
@@ -97,6 +105,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .wp-block-button__link:hover,
+.has-red-background-color a:hover,
 .has-dark-blue-background-color a:hover,
 .has-dark-gray-background-color a:hover,
 .has-blue-background-color a:hover {

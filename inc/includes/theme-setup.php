@@ -72,6 +72,11 @@ function build_theme_support() {
 				'color' => '#0073aa',
 			),
 			array(
+				'name'  => __( 'Red', 'fair-parent-theme' ),
+				'slug'  => 'red',
+				'color' => '#970101',
+			),
+			array(
 				'name'  => __( 'Dark Blue', 'fair-parent-theme' ),
 				'slug'  => 'dark-blue',
 				'color' => '#003d5c',
