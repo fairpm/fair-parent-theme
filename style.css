@@ -128,6 +128,7 @@ main:not(.home main) {
 	font-size: 1.125rem;
 }
 
+.wp-block-group__inner-container > p,
 .article-content > *,
 .entry-content > .entry-title > *,
 .entry-content > .entry-body > * {
