@@ -1124,10 +1124,6 @@ blockquote > *:last-child {
 	color: #fff;
 }
 
-.site-main {
-  display: grid;
-}
-
 .menu-items-wrapper:not(:has(.menu-items)) {
   display: flex;
 }
