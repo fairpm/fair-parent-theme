@@ -23,7 +23,7 @@ $description = get_bloginfo( 'description', 'display' );
   </<?php echo $el; ?>>
 
   <?php if ( $description || is_customize_preview() ) : ?>
-    <p class="site-description screen-reader-text">
+    <p class="site-description">
       <?php echo esc_html( $description ); ?>
     </p>
   <?php endif; ?>
