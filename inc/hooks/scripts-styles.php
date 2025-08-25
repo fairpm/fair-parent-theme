@@ -22,22 +22,25 @@ function move_jquery_into_footer( $wp_scripts ) {
  * Enqueue scripts and styles.
  */
 function enqueue_theme_scripts() {
-  wp_register_style( 'root', get_stylesheet_uri(), [], filemtime( get_theme_file_path( 'style.css' ) ) );
-  // Enqueue global.css
-  wp_enqueue_style( 'styles',
-    get_theme_file_uri( get_asset_file( 'global.css' ) ),
-    ['root'],
-    filemtime( get_theme_file_path( get_asset_file( 'global.css' ) ) )
-  );
+	$version = ( SCRIPT_DEBUG ) ? filemtime( get_theme_file_path( 'style.css' ) ) : FAIR_PARENT_VERSION;
+	wp_register_style( 'root', get_stylesheet_uri(), [], $version );
+	// Enqueue global.css
+	$version = ( SCRIPT_DEBUG ) ? filemtime( get_theme_file_path( get_asset_file( 'global.css' ) ) ) : FAIR_PARENT_VERSION;
+	wp_enqueue_style( 'styles',
+		get_theme_file_uri( get_asset_file( 'global.css' ) ),
+		['root'],
+		$version
+	);
 
-  // Enqueue jquery and front-end.js
-  wp_enqueue_script( 'jquery-core' );
-  wp_enqueue_script( 'scripts',
-    get_theme_file_uri( get_asset_file( 'front-end.js' ) ),
-    [],
-    filemtime( get_theme_file_path( get_asset_file( 'front-end.js' ) ) ),
-    true
-  );
+	$version = ( SCRIPT_DEBUG ) ? filemtime( get_theme_file_path( get_asset_file( 'front-end.js' ) ) ) : FAIR_PARENT_VERSION;
+	// Enqueue jquery and front-end.js
+	wp_enqueue_script( 'jquery-core' );
+	wp_enqueue_script( 'scripts',
+		get_theme_file_uri( get_asset_file( 'front-end.js' ) ),
+		[],
+		$version,
+		true
+	);
 
   // Required comment-reply script
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
