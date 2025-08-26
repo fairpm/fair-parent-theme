@@ -139,7 +139,7 @@ main:not(.home main) {
 
 @media screen and ( width < 1200px ) {
 	main > *,
-	.entry-content > * {
+	.entry-content > *:not(.alignfull) {
 		padding: 0 1rem;
 	}
 }

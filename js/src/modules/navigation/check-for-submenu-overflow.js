@@ -1,5 +1,5 @@
 // Import required modules
-import isOutOfViewport from './is-out-of-viewport';
+import isOutOfViewport from './is-out-of-viewport.js';
 
 // Check for submenu overflow
 function checkForSubmenuOverflow(items) {

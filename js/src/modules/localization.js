@@ -1,8 +1,15 @@
 export default function getLocalization(stringKey) {
-  if (typeof window.fair_parent_screenReaderText === 'undefined' || typeof window.fair_parent_screenReaderText[stringKey] === 'undefined') {
-    // eslint-disable-next-line no-console
-    console.error(`Missing translation for ${stringKey}`);
-    return '';
-  }
-  return window.fair_parent_screenReaderText[stringKey];
+	let localizations = {};
+	const localization_source = document.getElementById(
+		'wp-script-module-data-scripts'
+	);
+	if ( localization_source?.textContent ) {
+		try {
+			localizations = JSON.parse( localization_source.textContent );
+			return localizations[stringKey];
+		} catch {
+			console.error(`Missing translation for ${stringKey}`);
+			return '';
+		}
+	}
 }

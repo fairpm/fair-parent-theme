@@ -32,14 +32,13 @@ function enqueue_theme_scripts() {
 		$version
 	);
 
-	$version = ( SCRIPT_DEBUG ) ? filemtime( get_theme_file_path( get_asset_file( 'front-end.js' ) ) ) : FAIR_PARENT_VERSION;
+	$version = ( SCRIPT_DEBUG ) ? filemtime( get_theme_file_path( 'js/src/front-end.js' ) ) : FAIR_PARENT_VERSION;
 	// Enqueue jquery and front-end.js
 	wp_enqueue_script( 'jquery-core' );
-	wp_enqueue_script( 'scripts',
-		get_theme_file_uri( get_asset_file( 'front-end.js' ) ),
+	wp_enqueue_script_module( 'scripts',
+		get_theme_file_uri( 'js/src/front-end.js' ),
 		[],
 		$version,
-		true
 	);
 
   // Required comment-reply script
@@ -47,21 +46,19 @@ function enqueue_theme_scripts() {
     wp_enqueue_script( 'comment-reply' );
   }
 
-  wp_localize_script( 'scripts', 'fair_parent_screenReaderText', [
-    'expand_for'      => __( 'Open child menu for', 'fair-parent-theme' ),
-    'collapse_for'    => __( 'Close child menu for', 'fair-parent-theme' ),
-    'expand_toggle'   => __( 'Menu', 'fair-parent-theme' ),
-    'collapse_toggle' => __( 'Menu', 'fair-parent-theme' ),
-    'external_link'   => __( 'External site', 'fair-parent-theme' ),
-    'target_blank'    => __( 'opens in a new window', 'fair-parent-theme' ),
-    'previous_slide'  => __( 'Previous slide', 'fair-parent-theme' ),
-    'next_slide'      => __( 'Next slide', 'fair-parent-theme' ),
-    'last_slide'      => __( 'Last slide', 'fair-parent-theme' ),
-    'skip_slider'     => __( 'Skip over the carousel element', 'fair-parent-theme' ),
-  ] );
+  add_filter(
+	'script_module_data_scripts',
+	function ( array $data ): array {
+		$data['expand_for']      = __( 'Open child menu for', 'fair-parent-theme' );
+		$data['collapse_for']    = __( 'Close child menu for', 'fair-parent-theme' );
+		$data['expand_toggle']   = __( 'Menu', 'fair-parent-theme' );
+		$data['collapse_toggle'] = __( 'Menu', 'fair-parent-theme' );
+		$data['external_link']   = __( 'External site', 'fair-parent-theme' );
+		$data['target_blank']    = __( 'opens in a new window', 'fair-parent-theme' );
 
-  // Add domains/hosts to disable external link indicators
-  wp_localize_script( 'scripts', 'fair_parent_externalLinkDomains', THEME_SETTINGS['external_link_domains_exclude'] );
+		return $data;
+	}
+  );
 } // end fair_parent_scripts
 
 /**

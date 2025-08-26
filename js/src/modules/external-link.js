@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import getLocalization from './localization';
+import getLocalization from './localization.js';
 
 function isLinkExternal(link, localDomains) {
   // Empty links are not external

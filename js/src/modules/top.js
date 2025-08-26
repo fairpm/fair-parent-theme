@@ -1,12 +1,7 @@
 /* eslint-disable max-len */
-import MoveTo from 'moveto';
 
 const backToTop = () => {
   // Back to top button
-  const moveToTop = new MoveTo({
-    duration: 300,
-    easing: 'easeOutQuart',
-  });
   const topButton = document.getElementById('top');
   const focusableElements = document.querySelectorAll(
     'button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])',
@@ -27,20 +22,8 @@ const backToTop = () => {
 
   function scroll(focusVisible) {
     // Check if user prefers reduced motion, if so, just scroll to top
-    const prefersReducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)',
-    ).matches;
-
-    if (prefersReducedMotion) {
-      focusableElements[0].focus({ focusVisible });
-      return;
-    }
-
-    // Move smoothly to the first focusable element on the page
-    moveToTop.move(focusableElements[0]);
-
-    // Focus too, if on keyboard
-    focusableElements[0].focus({ preventScroll: true, focusVisible });
+    focusableElements[0].focus({ focusVisible });
+    return;
   }
 
   if (topButton) {
