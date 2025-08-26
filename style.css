@@ -121,7 +121,7 @@ main:not(.home main) {
 .home .wp-block-column .wp-block-button__link {
 	font-size: 1rem;
 	border-radius: 4px;
-	min-width: 240px;
+	min-width: 280px;
 }
 
 .home .wp-block-column .wp-block-button__link strong {
