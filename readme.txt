@@ -5,7 +5,7 @@ Fair Parent WordPress Theme
 Contributors: Digitoimisto Dude Oy, joedolson
 Tags: one-column, accessibility-ready, translation-ready
 
-Requires at least: 5.0
+Requires at least: 6.7
 Tested up to: 6.8
 Stable tag: 1.0.3
 License: MIT License
