@@ -1193,6 +1193,10 @@ footer nav {
 	.site-info {
 		justify-content: center;
 	}
+	.site-footer .site-info p {
+		text-align: center;
+		margin-top: 1.5rem;
+	}
 }
 
 .site-footer .wrapper-button,.site-main .wrapper-button {
