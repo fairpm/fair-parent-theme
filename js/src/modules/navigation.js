@@ -4,20 +4,20 @@
  */
 
 // Import functions needed for the navigation module
-import addMultipleEventListeners from './navigation/add-multiple-event-listeners';
-import calculateBurgerMenuPosition from './navigation/calculate-burger-menu-position';
-import a11yFocusTrap from './navigation/a11y-focus-trap';
-import calculateDropdownToggleHeight from './navigation/calculate-dropdown-toggle-height';
-import checkForSubmenuOverflow from './navigation/check-for-submenu-overflow';
-import dropdownMenuOnHover from './navigation/dropdown-menu-on-hover';
-import a11yAddDropdownToggleLabels from './navigation/a11y-add-dropdown-toggle-labels';
-import a11yDropdownMenuKeyboardNavigation from './navigation/a11y-dropdown-menu-keyboard-navigation';
+import addMultipleEventListeners from './navigation/add-multiple-event-listeners.js';
+import calculateBurgerMenuPosition from './navigation/calculate-burger-menu-position.js';
+import a11yFocusTrap from './navigation/a11y-focus-trap.js';
+import calculateDropdownToggleHeight from './navigation/calculate-dropdown-toggle-height.js';
+import checkForSubmenuOverflow from './navigation/check-for-submenu-overflow.js';
+import dropdownMenuOnHover from './navigation/dropdown-menu-on-hover.js';
+import a11yAddDropdownToggleLabels from './navigation/a11y-add-dropdown-toggle-labels.js';
+import a11yDropdownMenuKeyboardNavigation from './navigation/a11y-dropdown-menu-keyboard-navigation.js';
 
 // Navigation desktop click functions
-import convertDropdownMenuItems from './navigation/convert-dropdown-menu-items';
-import closeSubMenuHandler from './navigation/close-sub-menu-handler';
-import a11yAddDropdownToggleLabelsClick from './navigation/a11y-add-dropdown-toggle-labels-click';
-import a11yDropdownMenuKeyboardNavigationClick from './navigation/a11y-dropdown-menu-keyboard-navigation-click';
+import convertDropdownMenuItems from './navigation/convert-dropdown-menu-items.js';
+import closeSubMenuHandler from './navigation/close-sub-menu-handler.js';
+import a11yAddDropdownToggleLabelsClick from './navigation/a11y-add-dropdown-toggle-labels-click.js';
+import a11yDropdownMenuKeyboardNavigationClick from './navigation/a11y-dropdown-menu-keyboard-navigation-click.js';
 
 const navDesktop = () => {
   const navPrimary = document.querySelector('.nav-primary');

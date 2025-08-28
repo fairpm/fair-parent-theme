@@ -1,4 +1,4 @@
-import closeSubMenu from './close-sub-menu';
+import closeSubMenu from './close-sub-menu.js';
 
 function closeSubMenuHandler(items) {
   // Close open dropdowns when clicking outside of the menu

@@ -1,5 +1,5 @@
 // Import required modules
-import addMultipleEventListeners from './add-multiple-event-listeners';
+import addMultipleEventListeners from './add-multiple-event-listeners.js';
 
 // Accessible keyboard navigation for dropdown menus
 function a11yDropdownMenuKeyboardNavigationClick(items, focusableElements) {

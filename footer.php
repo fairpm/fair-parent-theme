@@ -30,17 +30,21 @@ namespace Fair_Parent;
   </div>
   <!-- ...up until here -->
 
-	<nav id="nav" class="nav-footer nav-menu" aria-label="<?php esc_html_e( 'Footer', 'fair-parent-theme' ); ?>">
-		<div id="menu-items-wrapper" class="menu-items-wrapper">
-			<?php wp_nav_menu( array(
-			'theme_location' => 'footer',
-			'container'      => false,
-			'depth'          => 1,
-			'menu_class'     => 'menu-items',
-			'menu_id'        => 'footer-menu',
-			'echo'           => true,
-			'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-			) ); ?>
+	<nav id="footer" class="nav-footer nav-menu" aria-label="<?php esc_html_e( 'Footer', 'fair-parent-theme' ); ?>">
+		<div id="menu-footer-items-wrapper" class="menu-footer-items-wrapper">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'footer',
+					'container'      => false,
+					'depth'          => 1,
+					'menu_class'     => 'footer-menu-items',
+					'menu_id'        => 'footer-menu',
+					'echo'           => true,
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				)
+			);
+			?>
 		</div>
 	</nav>
 </footer><!-- #colophon -->

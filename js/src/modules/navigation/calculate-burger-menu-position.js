@@ -17,11 +17,13 @@ function calculateBurgerMenuPosition() {
   // Get the height of .site-header and #nav-toggle
   // Calculate the top position of the toggle to be exactly in the center vertically
   const siteHeaderHeight = document.querySelector('.site-header').offsetHeight;
+  const lfHeaderHeight = document.getElementById('lf-header').offsetHeight;
+  let headerHeight = siteHeaderHeight + lfHeaderHeight;
 
   // Set navigation position from top if on mobile
   if (viewportWidth <= widthMaxMobile) {
-    document.getElementById('menu-items-wrapper').style.top = `${siteHeaderHeight}px`;
-    document.getElementById('menu-items-wrapper').style.height = `calc(100vh - ${siteHeaderHeight}px)`;
+    document.getElementById('menu-items-wrapper').style.top = `${headerHeight}px`;
+    document.getElementById('menu-items-wrapper').style.height = `calc(100vh - ${headerHeight}px)`;
 
     // If there is air-notification element(s), calculate top and height of menu-items-wrapper
     if (document.querySelector('.air-notification')) {
@@ -35,8 +37,8 @@ function calculateBurgerMenuPosition() {
       });
 
       // Set the height and top of menu-items-wrapper
-      document.getElementById('menu-items-wrapper').style.height = `calc(100vh - ${siteHeaderHeight + airNotificationsHeight}px)`;
-      document.getElementById('menu-items-wrapper').style.top = `${siteHeaderHeight + airNotificationsHeight}px`;
+      document.getElementById('menu-items-wrapper').style.height = `calc(100vh - ${headerHeight + airNotificationsHeight}px)`;
+      document.getElementById('menu-items-wrapper').style.top = `${headerHeight + airNotificationsHeight}px`;
 
       // When air-notification is closed, recalculate the height of menu-items-wrapper
       airNotifications.forEach((airNotification) => {
@@ -45,8 +47,8 @@ function calculateBurgerMenuPosition() {
         if (button) {
           button.addEventListener('click', () => {
             airNotificationsHeight -= currentNotificationHeight;
-            document.getElementById('menu-items-wrapper').style.height = `calc(100vh - ${siteHeaderHeight + airNotificationsHeight}px)`;
-            document.getElementById('menu-items-wrapper').style.top = `${siteHeaderHeight + airNotificationsHeight}px`;
+            document.getElementById('menu-items-wrapper').style.height = `calc(100vh - ${headerHeight + airNotificationsHeight}px)`;
+            document.getElementById('menu-items-wrapper').style.top = `${headerHeight + airNotificationsHeight}px`;
           });
         }
       });
