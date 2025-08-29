@@ -1513,20 +1513,13 @@ input[type=checkbox] + label:focus,input[type=checkbox] + label:hover,input[type
   --color-pagination-border-current: var(--color-valhalla);
   --color-pagination-text-current: var(--color-white);
   align-items: center;
-  background-color: var(--color-white);
-  border-bottom: 2px solid var(--color-blue-chalk);
-  border-left: 1px solid var(--color-blue-chalk);
-  border-right: 1px solid var(--color-blue-chalk);
-  border-top: 2px solid var(--color-blue-chalk);
   color: var(--color-pagination-text);
   display: flex;
   font-weight: var(--typography-weight-medium);
-  height: 2.1875rem;
   justify-content: center;
   margin-left: 0;
   margin-right: 0;
   transition: all 150ms;
-  width: 2.1875rem;
 }
 .page-numbers:last-child {
   border-bottom-left-radius: 0;
