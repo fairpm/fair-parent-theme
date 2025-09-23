@@ -2,6 +2,7 @@
  * Navigation.js module
  * The original, accessible navigation module for Air-light
  */
+import getLocalization from './localization.js';
 
 // Import functions needed for the navigation module
 import addMultipleEventListeners from './navigation/add-multiple-event-listeners.js';
@@ -104,12 +105,12 @@ const navMobile = () => {
 
       // Toggle aria-label
       // eslint-disable-next-line camelcase, no-undef
-      if (document.getElementById('nav-toggle').getAttribute('aria-label') === fair_parent_screenReaderText.expand_toggle) {
+      if (document.getElementById('nav-toggle').getAttribute('aria-label') === getLocalization('expand_toggle') ) {
         // eslint-disable-next-line camelcase, no-undef
-        document.getElementById('nav-toggle').setAttribute('aria-label', fair_parent_screenReaderText.collapse_toggle);
+        document.getElementById('nav-toggle').setAttribute('aria-label', getLocalization('collapse_toggle'));
       } else {
         // eslint-disable-next-line camelcase, no-undef
-        document.getElementById('nav-toggle').setAttribute('aria-label', fair_parent_screenReaderText.expand_toggle);
+        document.getElementById('nav-toggle').setAttribute('aria-label', getLocalization('expand_toggle'));
       }
 
       // Center vertically the absolute positioned mobile dropdown toggles by setting fixed height

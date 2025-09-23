@@ -2,7 +2,6 @@
 /**
  * FAIR Parent theme JavaScript.
  */
-
 // Import modules
 import { styleExternalLinks, initExternalLinkLabels } from './modules/external-link.js';
 import backToTop from './modules/top.js';

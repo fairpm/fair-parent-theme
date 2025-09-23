@@ -17,7 +17,7 @@ namespace Fair_Parent;
 /**
  * The current version of the theme.
  */
-define( 'FAIR_PARENT_VERSION', '1.0.3' );
+define( 'FAIR_PARENT_VERSION', '1.0.4' );
 
 // We need to have some defaults as comments or empties so let's allow this:
 // phpcs:disable Squiz.Commenting.InlineComment.SpacingBefore, WordPress.Arrays.ArrayDeclarationSpacing.SpaceInEmptyArray

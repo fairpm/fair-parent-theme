@@ -1,5 +1,6 @@
 // Import required modules
 import addMultipleEventListeners from './add-multiple-event-listeners.js';
+import getLocalization from '../localization.js';
 
 // Accessible keyboard navigation for dropdown menus
 function a11yDropdownMenuKeyboardNavigationClick(items, focusableElements) {
@@ -36,7 +37,7 @@ function a11yDropdownMenuKeyboardNavigationClick(items, focusableElements) {
 
               // Change toggle button aria-label
               // eslint-disable-next-line camelcase, no-undef
-              previousItemDropdownToggle.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${previousItemDropdownToggle.innerText}`);
+              previousItemDropdownToggle.setAttribute('aria-label', `${getLocalization('expand_for')} ${previousItemDropdownToggle.innerText}`);
 
               // Change toggle button aria-expanded
               previousItemDropdownToggle.setAttribute('aria-expanded', 'false');
@@ -56,7 +57,7 @@ function a11yDropdownMenuKeyboardNavigationClick(items, focusableElements) {
 
             // Change toggle button aria-label
             // eslint-disable-next-line camelcase, no-undef
-            previousItemDropdownToggle.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${previousItemDropdownToggle.innerText}`);
+            previousItemDropdownToggle.setAttribute('aria-label', `${getLocalization('expand_for')} ${previousItemDropdownToggle.innerText}`);
 
             // Change toggle button aria-expanded
             previousItemDropdownToggle.setAttribute('aria-expanded', 'false');
@@ -95,14 +96,14 @@ function a11yDropdownMenuKeyboardNavigationClick(items, focusableElements) {
 
           // Set aria-label of the dropdown button
           // eslint-disable-next-line camelcase, no-undef
-          thisElement.setAttribute('aria-label', `${fair_parent_screenReaderText.collapse_for} ${linkLabel}`);
+          thisElement.setAttribute('aria-label', `${getLocalization('collapse_for')} ${linkLabel}`);
         } else {
           // Set aria-expanded to false
           thisElement.setAttribute('aria-expanded', 'false');
 
           // Set aria-label of the dropdown button
           // eslint-disable-next-line camelcase, no-undef
-          thisElement.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${linkLabel}`);
+          thisElement.setAttribute('aria-label', `${getLocalization('expand_for')} ${linkLabel}`);
         }
 
         // Toggle the dropdown
@@ -147,7 +148,7 @@ function a11yDropdownMenuKeyboardNavigationClick(items, focusableElements) {
 
         // Set aria label attribute
         // eslint-disable-next-line camelcase, no-undef
-        dropdownToggleButton.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${linkLabel}`);
+        dropdownToggleButton.setAttribute('aria-label', `${getLocalization('expand_for')} ${linkLabel}`);
 
         // If we're on button, add aria-expanded to false
         if (thisElement.classList.contains('dropdown-toggle')) {
@@ -155,7 +156,7 @@ function a11yDropdownMenuKeyboardNavigationClick(items, focusableElements) {
 
           // Set aria-label of the dropdown button
           // eslint-disable-next-line camelcase, no-undef
-          thisElement.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${linkLabel}`);
+          thisElement.setAttribute('aria-label', `${getLocalization('expand_for')} ${linkLabel}`);
         }
 
         // Move focus back to previous .dropdown-toggle, but only if we're not on main level
@@ -203,7 +204,7 @@ function a11yDropdownMenuKeyboardNavigationClick(items, focusableElements) {
 
           // Set aria-label of the dropdown button
           // eslint-disable-next-line camelcase, no-undef
-          thisElement.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${linkLabel}`);
+          thisElement.setAttribute('aria-label', `${getLocalization('expand_for')} ${linkLabel}`);
 
           // Move focus back to previous .dropdown-toggle
           dropdownToggleButton.focus();
@@ -356,7 +357,7 @@ function a11yDropdownMenuKeyboardNavigationClick(items, focusableElements) {
 
           // Set aria-label of the dropdown button
           // eslint-disable-next-line camelcase, no-undef
-          thisElement.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${linkLabel}`);
+          thisElement.setAttribute('aria-label', `${getLocalization('expand_for')} ${linkLabel}`);
 
           // Move focus back to previous .dropdown-toggle
           dropdownToggleButton.focus();
