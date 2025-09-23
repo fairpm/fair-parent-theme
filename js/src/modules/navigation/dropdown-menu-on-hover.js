@@ -1,3 +1,5 @@
+import getLocalization from '../localization.js';
+
 // Dropdown menu function
 function dropdownMenuOnHover(items) {
   // Optional timeout
@@ -77,7 +79,7 @@ function dropdownMenuOnHover(items) {
 
             // Set aria-label to expand for all dropdown-toggle elements
             // eslint-disable-next-line camelcase, no-undef
-            dropdownToggle.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${linkText}`);
+            dropdownToggle.setAttribute('aria-label', `${getLocalization('expand_for')} ${linkText}`);
           }
         });
       }, hoverIntentTimeout);

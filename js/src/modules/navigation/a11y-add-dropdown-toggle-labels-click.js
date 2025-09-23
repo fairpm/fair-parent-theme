@@ -1,3 +1,5 @@
+import getLocalization from '../localization.js';
+
 // Add proper link labels for screen readers
 function a11yAddDropdownToggleLabelsClick(items) {
   items.forEach((li) => {
@@ -19,7 +21,7 @@ function a11yAddDropdownToggleLabelsClick(items) {
     const linkText = dropdownButton.innerHTML;
     // Add the aria-label to the dropdown button
     // eslint-disable-next-line camelcase, no-undef
-    dropdownButton.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${linkText}`);
+    dropdownButton.setAttribute('aria-label', `${getLocalization('expand_for')} ${linkText}`);
   });
 }
 

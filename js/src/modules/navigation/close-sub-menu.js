@@ -1,3 +1,5 @@
+import getLocalization from '../localization.js';
+
 function closeSubMenu(li) {
   // If menu item is not a dropdown then do nothing
   if (!li.querySelector('.dropdown-toggle') && !li.querySelector('.sub-menu')) {
@@ -29,7 +31,7 @@ function closeSubMenu(li) {
 
   // Add the aria-label to the dropdown button
   // eslint-disable-next-line camelcase, no-undef
-  dropdownButton.setAttribute('aria-label', `${fair_parent_screenReaderText.expand_for} ${linkText}`);
+  dropdownButton.setAttribute('aria-label', `${getLocalization('expand_for')} ${linkText}`);
 }
 
 export default closeSubMenu;
