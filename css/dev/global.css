@@ -1514,19 +1514,13 @@ input[type=checkbox] + label:focus,input[type=checkbox] + label:hover,input[type
   --color-pagination-text-current: var(--color-white);
   align-items: center;
   background-color: var(--color-white);
-  border-bottom: 2px solid var(--color-blue-chalk);
-  border-left: 1px solid var(--color-blue-chalk);
-  border-right: 1px solid var(--color-blue-chalk);
-  border-top: 2px solid var(--color-blue-chalk);
   color: var(--color-pagination-text);
   display: flex;
   font-weight: var(--typography-weight-medium);
-  height: 2.1875rem;
   justify-content: center;
   margin-left: 0;
   margin-right: 0;
   transition: all 150ms;
-  width: 2.1875rem;
 }
 .page-numbers:last-child {
   border-bottom-left-radius: 0;
@@ -1540,12 +1534,6 @@ input[type=checkbox] + label:focus,input[type=checkbox] + label:hover,input[type
   border-top-left-radius: 4px;
   border-top-right-radius: 0;
 }
-@media (max-width: 600px) {
-  .page-numbers {
-    height: 1.625rem;
-    width: 1.625rem;
-  }
-}
 
 a.page-numbers:focus,a.page-numbers:hover {
   background-color: var(--color-pagination-background-hover);
@@ -1553,6 +1541,7 @@ a.page-numbers:focus,a.page-numbers:hover {
   color: var(--color-pagination-text-hover);
 }
 
+.archive-plugin-card .pagination-wrapper ul li a.current, .archive-plugin-card .pagination-wrapper ul li span.current, .archive-theme-card .pagination-wrapper ul li a.current, .archive-theme-card .pagination-wrapper ul li span.current,
 .page-numbers.current {
   background-color: var(--color-pagination-background-current);
   border-color: var(--color-pagination-border-current);
