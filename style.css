@@ -114,7 +114,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	outline-offset: 4px;
 }
 
-main:not(.home main) {
+main:not(.home main,.search main) {
 	padding: 2rem 0;
 }
 
