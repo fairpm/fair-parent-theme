@@ -17,9 +17,9 @@
 
 namespace Fair_Parent;
 
-the_post();
+get_header();
 
-get_header(); ?>
+the_post(); ?>
 
 <main class="site-main" id="content">
 	<article class="entry-content">
