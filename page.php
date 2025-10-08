@@ -17,11 +17,15 @@
 
 namespace Fair_Parent;
 
-get_header();
-
-the_post(); ?>
+get_header(); ?>
 
 <main class="site-main" id="content">
+<?php
+if ( have_posts() ) :
+	while ( have_posts() ) :
+		the_post();
+		?>
+
 	<article class="entry-content">
 		<?php $class = ( is_front_page() ) ? 'screen-reader-text ' : ''; ?>
 		<header class="<?php echo esc_attr( $class ); ?>entry-title">
@@ -34,6 +38,11 @@ the_post(); ?>
 		?>
 		</div>
 	</article>
+
+<?php
+	endwhile;
+endif;
+?>
 </main>
 
 <?php get_footer();

@@ -12,13 +12,16 @@
 
 namespace Fair_Parent;
 
-get_header();
-
-the_post(); ?>
+get_header(); ?>
 
 <main class="site-main" id="content">
 
   <section class="block block-single">
+<?php
+if ( have_posts() ) :
+	while ( have_posts() ) :
+		the_post();
+		?>
     <article class="article-content">
 
       <h1><?php the_title(); ?></h1>
@@ -42,6 +45,10 @@ the_post(); ?>
       } ?>
 
     </article>
+<?php
+	endwhile;
+endif;
+?>
   </section>
 
 </main>
