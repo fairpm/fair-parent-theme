@@ -4,7 +4,7 @@ Theme URI: https://github.com/openwebff/fair-parent-theme/
 Author: FAIR
 Author URI: https://github.com/openwebff/
 Description: Used for web-pub site.
-Version: 1.0.3
+Version: 1.0.5
 Tested up to: 6.8.0
 Requires PHP: 7.4
 License: MIT License
@@ -114,7 +114,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	outline-offset: 4px;
 }
 
-main:not(.home main) {
+main:not(.home main,.search main) {
 	padding: 2rem 0;
 }
 

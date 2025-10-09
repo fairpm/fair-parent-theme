@@ -7,7 +7,7 @@ Tags: one-column, accessibility-ready, translation-ready
 
 Requires at least: 6.7
 Tested up to: 6.8
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: MIT License
 License URI: https://opensource.org/licenses/MIT
 
@@ -29,6 +29,32 @@ Or just get from GitHub: https://github.com/digitoimistodude/air-light
 
 
 == Changelog ==
+
+= 1.0.5 =
+
+* Change: Implement the loop in singular templates.
+* Bug fix: Fix padding on search results pages.
+
+= 1.0.4 =
+
+* Bug fix: Localization broken in script modules.
+* Bug fix: Fix navigation alignment.
+
+= 1.0.3 =
+
+* Bug fix: Menu position calculation did not account for LF header.
+* Change: Change built JS into script modules.
+* Bug fix: Change button minimum size.
+* Bug fix: Remove forced width on list elements.
+* Change: Reference script and style versions from theme version.
+
+= 1.0.2 =
+
+* Fix incorrect version number.
+
+= 1.0.1 =
+
+* Misc. design changes for better display options.
 
 = 1.0 - 2025-05-16 =
 * Initial dev
