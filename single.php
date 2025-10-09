@@ -12,35 +12,40 @@
 
 namespace Fair_Parent;
 
-get_header();
-
-the_post(); ?>
+get_header(); ?>
 
 <main class="site-main" id="content">
 
   <section class="block block-single">
     <article class="article-content">
+	<?php
+	if ( have_posts() ) :
+		while ( have_posts() ) :
+			the_post();
+			?>
+		<h1><?php the_title(); ?></h1>
 
-      <h1><?php the_title(); ?></h1>
+		<?php the_content();
 
-      <?php the_content();
+		// Required by WordPress Theme Check, feel free to remove as it's rarely used in starter themes
+		wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fair-parent-theme' ), 'after' => '</div>' ) );
 
-      // Required by WordPress Theme Check, feel free to remove as it's rarely used in starter themes
-      wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fair-parent-theme' ), 'after' => '</div>' ) );
+		entry_footer();
 
-      entry_footer();
+		if ( get_edit_post_link() ) {
+			edit_post_link( sprintf( wp_kses( __( 'Edit <span class="screen-reader-text">%s</span>', 'fair-parent-theme' ), [ 'span' => [ 'class' => [] ] ] ), get_the_title() ), '<p class="edit-link">', '</p>' );
+		}
 
-      if ( get_edit_post_link() ) {
-        edit_post_link( sprintf( wp_kses( __( 'Edit <span class="screen-reader-text">%s</span>', 'fair-parent-theme' ), [ 'span' => [ 'class' => [] ] ] ), get_the_title() ), '<p class="edit-link">', '</p>' );
-      }
+		the_post_navigation();
 
-      the_post_navigation();
+			// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) {
+			comments_template();
+		}
 
-  		// If comments are open or we have at least one comment, load up the comment template.
-      if ( comments_open() || get_comments_number() ) {
-        comments_template();
-      } ?>
-
+		endwhile;
+	endif;
+	?>
     </article>
   </section>
 
