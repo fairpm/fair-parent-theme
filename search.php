@@ -13,6 +13,8 @@
 
 namespace Fair_Parent;
 
+get_header();
+
 $results = [];
 
 // phpcs:ignore WordPress.Security.NonceVerification.Recommended
@@ -33,9 +35,7 @@ if ( ! empty( $_GET['s'] ) && have_posts() ) {
 foreach ( $results as $slug => $post_type ) {
   $results[ $slug ]['object'] = (object) get_post_type_object( $slug );
   $results[ $slug ]['count']  = (int) count( $results[ $slug ]['posts'] );
-}
-
-get_header(); ?>
+} ?>
 
 <main class="site-main" id="content">
 

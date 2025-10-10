@@ -17,22 +17,29 @@
 
 namespace Fair_Parent;
 
-the_post();
-
 get_header(); ?>
 
 <main class="site-main" id="content">
 	<article class="entry-content">
-		<?php $class = ( is_front_page() ) ? 'screen-reader-text ' : ''; ?>
-		<header class="<?php echo esc_attr( $class ); ?>entry-title">
-			<?php the_title( '<h1 class="entry-header">', '</h1>' ); ?>
-		</header>
-		<div class="entry-body">
-		<?php
-			the_content();
-			air_edit_link();
-		?>
-		</div>
+	<?php
+	if ( have_posts() ) :
+		while ( have_posts() ) :
+			the_post();
+			?>
+			<?php $class = ( is_front_page() ) ? 'screen-reader-text ' : ''; ?>
+			<header class="<?php echo esc_attr( $class ); ?>entry-title">
+				<?php the_title( '<h1 class="entry-header">', '</h1>' ); ?>
+			</header>
+			<div class="entry-body">
+			<?php
+				the_content();
+				air_edit_link();
+			?>
+			</div>
+	<?php
+		endwhile;
+	endif;
+	?>
 	</article>
 </main>
 
