@@ -224,7 +224,6 @@ main:not(.home main,.search main) {
 
 #lf-header .container {
 	margin: 0 auto;
-	display: flex;
 	align-items: center;
 	padding: 8px var(--spacing-container-padding-inline) 6px;
 }
