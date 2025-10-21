@@ -717,8 +717,9 @@ footer ul.footer-menu-items {
 
 @media only screen and ( width < 720px ) {
 	footer ul.footer-menu-items {
-		column-gap: 1.125rem;
 		font-size: .875rem;
+		display: block;
+		text-align: left;
 	}
 }
 
@@ -1168,11 +1169,12 @@ blockquote > *:last-child {
 }
 .site-footer .wordpress-logo {
   display: block;
-  margin-bottom: 1.25rem;
-  margin-left: auto;
+  margin-bottom: .5rem;
   margin-right: auto;
+  margin-left: auto;
   fill: white;
 }
+
 .site-footer span {
   display: block;
   text-align: center;
@@ -1183,8 +1185,8 @@ blockquote > *:last-child {
 }
 .site-footer .powered-by-wordpress {
   display: inline-block;
-  font-weight: var(--typography-weight-semibold);
   text-align: center;
+  font-size: var(--typography-size-16);
 }
 footer nav,
 .site-info {

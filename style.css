@@ -138,8 +138,8 @@ main:not(.home main,.search main) {
 }
 
 @media screen and ( width < 1200px ) {
-	main > *,
-	.entry-content > *:not(.alignfull) {
+	.entry-title > *,
+	.entry-body > *:not(.alignfull,ul,ol) {
 		padding: 0 1rem;
 	}
 }
@@ -246,4 +246,13 @@ main:not(.home main,.search main) {
 
 code {
 	color: #059332;
+}
+
+@media screen and ( width < 720px ) {
+	.has-large-font-size {
+		font-size: 1.5rem !important;
+	}
+	.text-leader {
+		margin-top: 1.5rem;
+	}
 }
