@@ -17,14 +17,24 @@ get_header(); ?>
 <main class="site-main" id="content">
 
   <section class="block block-single">
-    <article class="article-content">
+    <article <?php post_class( 'article-content' ); ?>>
 	<?php
 	if ( have_posts() ) :
 		while ( have_posts() ) :
 			the_post();
 			?>
-		<h1><?php the_title(); ?></h1>
+		<header>
+			<h1><?php the_title(); ?></h1>
 
+			<?php if ( has_post_thumbnail() ) {
+				?>
+				<div class="post-thumbnail">
+					<?php the_post_thumbnail(); ?>
+				</div>
+				<?php
+			}
+			?>
+		</header>
 		<?php the_content();
 
 		// Required by WordPress Theme Check, feel free to remove as it's rarely used in starter themes

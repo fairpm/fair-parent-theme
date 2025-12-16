@@ -35,13 +35,17 @@ get_header(); ?>
         <?php while ( have_posts() ) :
           the_post(); ?>
           <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<header>
+				<h2>
+					<a href="<?php echo esc_url( get_the_permalink() ); ?>">
+						<?php the_title(); ?>
+					</a>
+				</h2>
 
-            <h2>
-              <a href="<?php echo esc_url( get_the_permalink() ); ?>">
-                <?php the_title(); ?>
-              </a>
-            </h2>
-
+				<div class="post-thumbnail">
+					<?php the_post_thumbnail(); ?>
+				</div>
+			</header>
             <p>
               <time datetime="<?php the_time( 'c' ); ?>">
                 <?php echo get_the_date( get_option( 'date_format' ) ); ?>
