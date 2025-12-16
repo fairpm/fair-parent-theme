@@ -248,8 +248,8 @@ img {
   --typography-paragraph-size: var(--typography-size-18);
   --typography-nav-toggle-label-size: var(--typography-size-16);
   --typography-captions-size: var(--typography-size-16);
-  --typography-heading-line-height: 1.5;
-  --typography-heading-core-line-height: 1.5;
+  --typography-heading-line-height: 1.2;
+  --typography-heading-core-line-height: 1.2;
   --typography-paragraph-line-height: 1.7;
   --typography-weight-regular: 400;
   --typography-weight-medium: 500;
