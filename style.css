@@ -248,6 +248,16 @@ code {
 	color: #059332;
 }
 
+iframe[src*="youtube"] {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+}
+
+.blog main {
+	padding: 0 !important;
+}
+
 .blog article header > h2 a {
 	text-decoration: none;
 }
@@ -324,5 +334,108 @@ article.has-post-thumbnail {
 	.blog article header {
 		grid-template-columns: 1fr;
 		gap: 20px;
+	}
+}
+
+/* Explorer Overrides */
+.single-plugin-card header .entry-preview.entry-preview a.button, .single-plugin-card header .entry-download.entry-preview a.button, .single-theme-card header .entry-preview.entry-preview a.button, .single-theme-card header .entry-download.entry-preview a.button,
+.archive-plugin-card .plugin-results .plugin-card footer .entry-preview.entry-preview a.button, .archive-plugin-card .plugin-results .plugin-card footer .entry-download.entry-preview a.button, .archive-plugin-card .plugin-results .plugin-card footer .entry-add-to-cart.entry-preview a.button, .archive-plugin-card .plugin-results .theme-card footer .entry-preview.entry-preview a.button, .archive-plugin-card .plugin-results .theme-card footer .entry-download.entry-preview a.button, .archive-plugin-card .plugin-results .theme-card footer .entry-add-to-cart.entry-preview a.button, .archive-plugin-card .theme-results .plugin-card footer .entry-preview.entry-preview a.button, .archive-plugin-card .theme-results .plugin-card footer .entry-download.entry-preview a.button, .archive-plugin-card .theme-results .plugin-card footer .entry-add-to-cart.entry-preview a.button, .archive-plugin-card .theme-results .theme-card footer .entry-preview.entry-preview a.button, .archive-plugin-card .theme-results .theme-card footer .entry-download.entry-preview a.button, .archive-plugin-card .theme-results .theme-card footer .entry-add-to-cart.entry-preview a.button, .archive-theme-card .plugin-results .plugin-card footer .entry-preview.entry-preview a.button, .archive-theme-card .plugin-results .plugin-card footer .entry-download.entry-preview a.button, .archive-theme-card .plugin-results .plugin-card footer .entry-add-to-cart.entry-preview a.button, .archive-theme-card .plugin-results .theme-card footer .entry-preview.entry-preview a.button, .archive-theme-card .plugin-results .theme-card footer .entry-download.entry-preview a.button, .archive-theme-card .plugin-results .theme-card footer .entry-add-to-cart.entry-preview a.button, .archive-theme-card .theme-results .plugin-card footer .entry-preview.entry-preview a.button, .archive-theme-card .theme-results .plugin-card footer .entry-download.entry-preview a.button, .archive-theme-card .theme-results .plugin-card footer .entry-add-to-cart.entry-preview a.button, .archive-theme-card .theme-results .theme-card footer .entry-preview.entry-preview a.button, .archive-theme-card .theme-results .theme-card footer .entry-download.entry-preview a.button, .archive-theme-card .theme-results .theme-card footer .entry-add-to-cart.entry-preview a.button {
+	background-color: var(--color-blue);
+}
+
+.single-plugin-card header .entry-preview.entry-preview a.button:hover, .single-plugin-card header .entry-download.entry-preview a.button:hover, .single-theme-card header .entry-preview.entry-preview a.button:hover, .single-theme-card header .entry-download.entry-preview a.button:hover {
+	background-color: var(--color-blue);
+}
+
+#details-content-description,
+#accordion-content-description {
+	line-height: 1.5;
+	padding: 1rem;
+}
+
+.entry-add-to-cart {
+	display: none;
+}
+
+.single-plugin-card header .entry-preview, .single-plugin-card header .entry-download, .single-theme-card header .entry-preview, .single-theme-card header .entry-download {
+	width: auto;
+}
+
+.single-plugin-card header .entry-title .plugin-version, .single-plugin-card header .entry-title .theme-version, .single-theme-card header .entry-title .plugin-version, .single-theme-card header .entry-title .theme-version {
+	line-height: var(--typography-paragraph-line-height)
+}
+
+@media ( width < 576px ) {
+	.archive-plugin-card .plugin-results, .archive-plugin-card .theme-results, .archive-theme-card .plugin-results, .archive-theme-card .theme-results {
+		gap: 20px;
+	}
+	.archive-plugin-card .plugin-results .plugin-card.fair .fair-badge p, .archive-plugin-card .plugin-results .theme-card.fair .fair-badge p, .archive-plugin-card .theme-results .plugin-card.fair .fair-badge p, .archive-plugin-card .theme-results .theme-card.fair .fair-badge p, .archive-theme-card .plugin-results .plugin-card.fair .fair-badge p, .archive-theme-card .plugin-results .theme-card.fair .fair-badge p, .archive-theme-card .theme-results .plugin-card.fair .fair-badge p, .archive-theme-card .theme-results .theme-card.fair .fair-badge p {
+		margin: 0 -4px -4px 0;
+		border-radius: 2px 0 4px;
+	}
+}
+
+/* Footnotes */
+#footnotes {
+	max-width: 960px;
+	margin: 0 auto 1.5rem;
+}
+#footnotes hr {
+	width: 25%;
+	margin: 3rem auto 1rem 0;
+	border-color: var(--color-link-text);
+}
+#footnotes p {
+	font-size: .9em;
+	max-width: 83ch;
+	text-indent: -3ch;
+	margin: 0 auto 0 3ch;
+	line-height: 1.39;
+}
+#footnotes a[href^="#has-note"],
+a[href^="#footnote"] {
+	padding: 0 .5ch;
+}
+
+/* Pullquotes */
+p:empty {
+	display: none;
+}
+.shortquote {
+	/* when you want less than a big pullquote block */
+	position: relative;
+	padding: .3ch 1ch .3ch 1.5ch;
+	font-size: 1.1em;
+	line-height: 1.4;
+	font-weight: 500;
+	background: #fafafa;
+	border: 2px solid #eee;
+	border-radius: .5em;
+	margin: 1em auto 1.25em;
+	max-width: 60ch;
+	text-align: center;
+	text-wrap: balance;
+	&> em:last-child {
+		font-size: .85em;
+		font-weight: 400;
+		display: block;
+		margin-top: .4em;
+		text-align: right;
+	}
+	&::before {
+		display: inline-block;
+		content: "“";
+		height: 32px;
+		width: 32px;
+		position: absolute;
+		font-size: 52px;
+		font-weight: 900;
+		line-height: 52px;
+		color: #777;
+		opacity: .5;
+		left: -12px;
+		top: -14px;
+		border-radius: 50%;
+		background-color: #fff;
 	}
 }

@@ -1128,6 +1128,10 @@ blockquote > *:last-child {
   font-weight: 400;
 }
 
+.site-title svg {
+	display: none;
+}
+
 .site-title a {
   align-items: center;
   display: flex;
