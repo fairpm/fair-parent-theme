@@ -416,15 +416,15 @@ a:focus,button:focus,div[tabindex]:focus,input:focus,select:focus,textarea:focus
   }
 }
 .external-link-icon {
-  margin-left: 0.4375rem;
+  margin-left: 0.25rem;
   margin-right: 2px;
 }
 @media (max-width: 600px) {
   .external-link-icon {
-    height: 0.75rem;
-    margin-left: 4px;
+    height: 0.625rem;
+    margin-left: 3px;
     transform: translateY(1px);
-    width: 0.75rem;
+    width: 0.625rem;
   }
 }
 
