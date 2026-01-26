@@ -425,6 +425,7 @@ p:empty {
 	&::before {
 		display: inline-block;
 		content: "“";
+		content: "“" / '';
 		height: 32px;
 		width: 32px;
 		position: absolute;
