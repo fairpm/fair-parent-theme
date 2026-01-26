@@ -7,7 +7,7 @@ Tags: one-column, accessibility-ready, translation-ready
 
 Requires at least: 6.7
 Tested up to: 6.8
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: MIT License
 License URI: https://opensource.org/licenses/MIT
 
@@ -29,6 +29,16 @@ Or just get from GitHub: https://github.com/digitoimistodude/air-light
 
 
 == Changelog ==
+
+= 1.0.6 =
+
+* Remove CSS map from main style file.
+* Move customizer CSS into styles.
+* Set alternative text on generated content in Pullquotes
+* Reduce visual impact of external link icon
+* Add support for post thumbnails on blog posts.
+* Improve layout & hover styles, date views in meta.
+* Reduce heading line height. Props @cdils.
 
 = 1.0.5 =
 
